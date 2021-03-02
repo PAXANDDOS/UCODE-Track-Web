@@ -1,0 +1,46 @@
+.main{
+    font-family: Verdana, serif;
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+}
+div{
+    position: relative;
+    float: left;
+}
+.hero{
+    position: relative;
+    width: 270px;
+    height: 140px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+img{
+    height: 182px;
+    position: absolute;
+}
+#alias{
+    color: white;
+    text-align: right;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+}
+small{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 9px;
+}
+#captain_image { margin-top: -32px; }
+#captain { background: linear-gradient(180deg, #4568DC, #B06AB3); }
+
+#iron_image { margin-top: -32px; }
+#iron { background: linear-gradient(180deg, #e52d27, #b31217); }
+
+#widow_image { margin-top: -30px; }
+#widow { background: linear-gradient(90deg, #000, #61045F); }
+
+#spider_image { margin-top: -10px; }
+#spider { background: linear-gradient(180deg, #e52d27, #000); }

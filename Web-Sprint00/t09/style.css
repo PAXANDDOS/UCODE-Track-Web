@@ -1,0 +1,23 @@
+a[href^="https:"]:before {
+    content: "\00BB";
+    padding-right: 10px;
+}
+a[href^="https://www"] {
+    color: green;
+    padding-right: 10px;
+}
+a[href^="http:"]:before {
+    content: "\00D7";
+    color: red;
+    padding-right: 10px;
+}
+a[target^="_blank"]:after {
+    content: " \21D2";
+    color: coral;
+    padding-right: 10px;
+}
+a[href$="/a"]:hover::after {
+    content: "\2026 last symbol is 'a'";
+    color: coral;
+    font-style: italic;
+}

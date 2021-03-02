@@ -1,0 +1,32 @@
+img {
+    border-radius: 20px;
+}
+td {
+    border: 2px solid #e0e0e0;
+    padding: 10px;
+}
+h1 {
+    text-align: left;
+}
+#Header {
+    background-color: black;
+    color: white;
+}
+#SoulStone {
+    background-color: #d7923d;
+}
+#TimeStone {
+    background-color: #3a7d21;
+}
+#SpaceStone {
+    background-color: #005892;
+}
+#MindStone {
+    background-color: #ffff03;
+}
+#RealityStone {
+    background-color: #c12a2f;
+}
+#PowerStone {
+    background-color: #8175b7;
+}
