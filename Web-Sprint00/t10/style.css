@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap'); /* Шрифта такого в маке понятное дело нет, загрузил с гугла */
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Lato', sans-serif;
+}
+.day {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    transition: all .2s cubic-bezier(.17,.67,.83,.67); /* Спасибо покечату что я научился юзать кубик */
+}
+.day:hover {
+    box-shadow: -1px 1px 11px 4px rgba(39, 161, 255, 0.35);
+}
+.day span:first-child {
+    text-align: center;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1.5em;
+    background: rgb(64, 149, 181);
+    color: white;
+}
+.day span:last-child {
+    font-weight: 400;
+    font-size: 2em;
+}
