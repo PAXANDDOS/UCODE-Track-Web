@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Super back-up</title>
+        <meta charset="utf-8">
+        <meta name="description" content="t06. Super back-up">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 id="header">Superhero request form</h1>
+        <form action="">
+            <h1 id="form">What do you need help with?</h1>
+            <div id="box">
+                <input type="checkbox" id="first" name="defeatVillain" style="display: none">
+                <label class="option" for="first">DEFEAT A VILLAIN</label>
+
+                <input type="checkbox" id="second" name="saveCivilian" style="display: none">
+                <label class="option" for="second">SAVE A CIVILIAN</label>
+
+                <input type="checkbox" id="third" name="stopRobbery" style="display: none">
+                <label class="option" for="third">STOP A ROBBERY</label>
+            </div>
+            <div id="box">
+                <input type="checkbox" id="fourth" name="preventApocalypse" style="display: none">
+                <label class="option" for="fourth">PREVENT AN APOCALYPSE</label>
+
+                <input type="checkbox" id="fifth" name="trainSidekick"style="display: none">
+                <label class="option" for="fifth">TRAIN A SIDEKICK</label>
+            </div>
+            <div id="box">
+                <input type="checkbox" id="sixth" name="otherStuff"style="display: none">
+                <label class="option" for="sixth">OTHER STUFF</label>
+            </div>
+            <div>
+                <div class="input">
+                    <input class="inputdata" type="text" id="details" name="jobDetails" placeholder="Job details">
+                </div><br>
+                <div class="input">
+                    <input class="inputdata" type="text" id="name" name="name" placeholder="Name">
+                    <input class="inputdata" type="text" id="email" name="email" placeholder="Email">
+                </div>
+            </div>
+            <div>
+                <input type="submit" id="send" name="sendButton" value="SEND" style="display: none">
+                <label class="send" for="send">SEND</label>
+            </div>
+        </form>
+    </body>
+</html>

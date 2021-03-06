@@ -1,0 +1,12 @@
+img {
+    margin: 0 15px 5px 0;
+    width: 450px;
+    float: left;
+}
+
+@media print {
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+}

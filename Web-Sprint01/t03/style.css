@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+body {
+	background: linear-gradient(-45deg, #4b6cb7, #182848, #5f2c82, #49a09d);
+	background-size: 2500% 2500%;
+	animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+nav {
+    font-family: 'Rubik', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    transition: all .1s cubic-bezier(.17,.67,.83,.67);
+}
+
+.dropbtn {
+    background-color: #4a5d9b;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    transition: all .1s cubic-bezier(.17,.67,.83,.67);
+}
+.dropbtn a{
+    color: white;
+    text-decoration:none;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 109px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    font-family: 'Rubik', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    background-color: #39456d;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 12px;
+    background-color: #4a5d9b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -11px;
+    transition: all .1s cubic-bezier(.17,.67,.83,.67);
+}
+.logo:hover {
+    background-color: #39456d;
+}
+.logo img{
+    width: 45px;
+    align-content: center;
+}

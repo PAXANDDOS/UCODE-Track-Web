@@ -1,0 +1,29 @@
+div {
+    display: flex;
+    justify-content: space-around;
+}
+form {
+    display: flex;
+    width: 100%;
+}
+input {
+    position: relative;
+    height: 2em;
+    color: green;
+    margin-top: 100px;
+}
+input:hover {
+    color: red;
+}
+#search {
+    width: 100vw;
+}
+::-webkit-input-placeholder {
+    color: green;
+}
+::-moz-input-placeholder {
+    color: green;
+}
+::-o-input-placeholder {
+    color: green;
+}

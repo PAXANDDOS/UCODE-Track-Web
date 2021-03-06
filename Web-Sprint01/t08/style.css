@@ -1,0 +1,27 @@
+body {
+    text-align: center;
+}
+.rails {
+    width: 100vw;
+    margin: 150px auto;
+}
+.ball {
+    width: 150px;
+    height: 150px;
+    border: 1px solid rgb(0, 153, 0);
+    border-radius: 50%;
+    background-color: lime;
+    display: block;
+    animation: shake 2s ease-out alternate infinite;
+    float: left;
+    transition: 3s cubic-bezier(.17,.67,.83,.67);
+    transition-property: background-color;
+}
+.ball:hover {
+    background-color: red;
+}
+@keyframes shake {
+    100% {
+        transform: translateX(calc(100vw - 150px));
+    }
+}
