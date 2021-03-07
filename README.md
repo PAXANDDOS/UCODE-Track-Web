@@ -29,8 +29,8 @@
         <tr>
             <th>Web-Sprint01</th>
             <th>Get advanced skills in HTML and CSS (hovering, rotation, adaptive layouts, drop-down menus, filtering, etc.)</th>
-            <th>__.03.2021</th>
-            <th></th>
+            <th>07.03.2021</th>
+            <th>100</th>
         </tr>
         <tr>
             <th>Web-Sprint02</th>
