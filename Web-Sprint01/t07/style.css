@@ -48,6 +48,9 @@ body {
     align-items: center;
     background-color: white;
 }
+#info a {
+    text-decoration: none;
+}
 #info span {
     padding: 23px 30px 23px 30px;
     font-family: 'Rubik', Arial, Helvetica, sans-serif;
@@ -143,7 +146,6 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 100vh;
 }
 .filters {
     display: flex;
@@ -409,14 +411,14 @@ input[type='range']::-webkit-slider-thumb {
     visibility: visible;
 }
 
-.footer {
+footer {
     display: flex;
     width: 100%;
     background-color: whitesmoke;
     padding: 20px;
     justify-content: flex-start;
 }
-.footer a {
+footer a {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     text-decoration: none;
     cursor: pointer;
@@ -437,7 +439,6 @@ input[type='range']::-webkit-slider-thumb {
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 100vh;
     }
     .filters {
         width: 100%;
@@ -472,5 +473,270 @@ input[type='range']::-webkit-slider-thumb {
           ". . ."
           ". . ."
           ". . .";
+    }
+}
+
+/* ---------- CARD ---------- */
+.card-main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.card-demo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 50px;
+    background-color: white;
+}
+.card-demo img {
+    width: 40%;
+}
+.card-demo .card-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    padding: 30px;
+}
+.card-demo .card-title div:first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+}
+.card-demo .card-title div:first-child img {
+    width: 18px;
+    height: 18px;   
+}
+.card-demo .card-title div:first-child span {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.8em;
+    color: #ea3457;
+    margin-left: 5px;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.card-demo .card-title div:nth-child(2) {
+    width: 100%;
+}
+.card-demo .card-title div:nth-child(2) h2{
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 2em;
+    color: rgba(0, 0, 0, 0.7);
+    margin: 10px 0;
+    cursor: default;
+}
+.card-demo .card-title div:nth-child(2) h3 {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #ea3457;
+    cursor: default;
+}
+.card-demo .card-title div:nth-child(2) small {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: .7em;
+    color: rgba(234, 52, 88, 0.6);
+    margin-left: .5em;
+    cursor: default;
+}
+
+.card-demo .card-title div:nth-child(3){
+    display: block;
+}
+.card-demo .card-title div:nth-child(3) h3 {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: rgba(0, 0, 0, 0.5);
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    margin: 0;
+    width: 20px;
+    height: 42px;
+}
+.card-demo .card-title div:nth-child(3) input {
+    width: 45px;
+    height: 42px;
+    line-height: 1.65;
+    float: left;
+    display: block;
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+    border: 1px solid #eee;
+    font-family: 'Rubik', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.card-demo .card-title div:nth-child(4) button {
+    display:inline-block;
+    padding:1.5em 6em;
+    border:0.1em solid #ea3457;
+    margin:10px 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#ea3457;
+    text-align:center;
+    transition: .2s cubic-bezier(.17,.67,.83,.67);
+    transition-property: background-color, color;
+}
+.card-demo .card-title div:nth-child(4) button:hover {
+    color:white;
+    background-color:#ea3457;
+}
+
+.card-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 30px 125px 30px 125px;
+}
+.card-desc h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.3em;
+    color: white;
+    background-color: #ea3457;
+    width: 100%;
+    height: 2em;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    margin: 0;
+}
+.card-desc div {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    background-color: whitesmoke;
+}
+.card-desc div p {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-weight: 400;
+    font-size: 1em;
+    color: #585858;
+    background-color: whitesmoke;
+    width: 100%;
+    cursor: default;
+    margin: 6px 0;
+}
+.card-desc div ul li {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-weight: 300;
+    font-size: 1em;
+    color: #7e7e7e;
+    background-color: whitesmoke;
+    width: 100%;
+    cursor: default;
+}
+
+.card-review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 30px 125px 30px 125px;
+}
+.card-review h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.3em;
+    color: white;
+    background-color: #0087bd;
+    width: 100%;
+    height: 2em;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    margin: 0;
+}
+.card-review div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    width: 100%;
+}
+.card-review div:nth-child(2) div.user {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    padding: 20px 10px;
+}
+.card-review div:nth-child(2) div.user img{
+    height: 50px;
+}
+.card-review div:nth-child(2) div.user div.review {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 10px;
+}
+.card-review div:nth-child(2) div.user div.review h3 {
+    margin: 0;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: black;
+}
+.card-review div:nth-child(2) div.user div.review p {
+    margin: 0;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-weight: 500;
+    font-size: .9em;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+@media only screen and (max-width: 1024px) {
+    .card-demo {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-demo img {
+        width: 70%;
+    }
+    .card-demo .card-title {
+        width: 80%;
     }
 }
