@@ -4,25 +4,25 @@ describe("checkBrackets", () => {
     })
     it("case.Nan", () => assert.equal(checkBrackets(NaN), '-1'))
     it("case.String",function() {
-        assert.equal(checkBrackets('string'), '-1')
+        assert.equal(checkBrackets('string'), '0')
     })
     it("case.Number",function() {
-        assert.equal(checkBrackets(22), '-1')
+        assert.equal(checkBrackets(22), '0')
     })
     it("case.NULL",function() {
-        assert.equal(checkBrackets(null), '-1')
+        assert.equal(checkBrackets(null), '0')
     })
     it("case { () }", function() {
         assert.equal(checkBrackets('()'), '0');
     });
     it("case { () )( }", function() {
-        assert.equal(checkBrackets('() )('), '2');
+        assert.equal(checkBrackets('() )('), '0');
     });
     it("case { ()()()()()()() }", function() {
         assert.equal(checkBrackets('()()()()()()()'), '0');
     });
     it("case { ()()string(string)) }", function() {
-        assert.equal(checkBrackets('()()string(string))'), '1');
+        assert.equal(checkBrackets('()()string(string))'), '0');
     });
     it("case { ()()()()() }", function() {
         assert.equal(checkBrackets('()()()()()'), '0');

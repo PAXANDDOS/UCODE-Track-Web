@@ -35,8 +35,8 @@
         <tr>
             <th>Web-Sprint02</th>
             <th>Introduction to JavaScript. Basic functions (alert, prompt, console.log, etc.).</th>
-            <th>__.03.2021</th>
-            <th></th>
+            <th>09.03.2021</th>
+            <th>99</th>
         </tr>
         <tr>
             <th>Web-Sprint03</th>
