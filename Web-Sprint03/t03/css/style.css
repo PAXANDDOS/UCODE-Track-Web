@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+.main {
+    display: flex;
+    width: 100%;
+    height: 50em;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.infoblock {
+    display: flex;
+    width: 100%;
+    height: 5em;
+    background-color: rgba(255, 255, 0, 0.5);
+    border-top: 2px solid rgba(255, 196, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+.infoblock h1 {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 2.2em;
+    text-align: center;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.imgblock { 
+    width: 100%;
+    height: inherit;
+    background-color: rgba(255, 255, 0, 0.5);
+    display: flex;
+    justify-content: center;
+}
+.imgblock img{
+    display: flex;
+    max-width: 100%;
+    height: 100%;
+}
+.statblock { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(255, 255, 0, 0.5);
+    width: 100%;
+}
+.statblock div:first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+.statblock div:last-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+}
+.statblock h2{
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    margin: 0 0 0 20px;
+    padding: 0;
+}
+.statblock span{
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.buttonsblock {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 5em;
+    align-items: center;
+    justify-content: space-between;
+}
+.buttonsblock button {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    border: 0;
+    transition: .1s cubic-bezier(.17,.67,.83,.67);
+    transition-property: background-color, color;
+}
+.buttonsblock button:hover {
+    background-color: rgba(255, 255, 0, 0.5);
+}
+.buttonsblock button:focus {
+    outline: none;
+}
