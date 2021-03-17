@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lazy loading</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="description" content="t06. Lazy loading">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h1>Lazy loading</h1>
+        <div class="info">
+            <label><span id="num">2</span> images loaded from 20</label>
+        </div>
+        <div class="list">
+            <div>
+                <img src="https://cdn.discordapp.com/attachments/701503404513427466/821373150935646208/IMAGE_2021-03-16_152336.jpg" width="700" height="500">
+            </div>
+            <div>
+                <img src="https://cdn.discordapp.com/attachments/701503404513427466/821373266970804274/IMAGE_2021-03-16_152405.jpg" width="700" height="500">
+            </div>
+            <div>
+                <img class="lazy" src="https://designshack.net/wp-content/uploads/placeholder-image.png" width="700" height="500" data-src="https://cdn.discordapp.com/attachments/701503404513427466/821373290856710144/IMAGE_2021-03-16_152411.jpg">
+            </div>
+            <div>
+                <img class="lazy" src="https://designshack.net/wp-content/uploads/placeholder-image.png" width="700" height="500" data-src="https://cdn.discordapp.com/attachments/608300096798588959/743587818730946691/IMG_20200813_201238_425.jpg">
+            </div>
+            <div>
+                <img class="lazy" src="https://designshack.net/wp-content/uploads/placeholder-image.png" width="700" height="500" data-src="https://cdn.discordapp.com/attachments/739101688530731028/785578094420557854/32S4hn4yEF4.jpg">
+            </div>
+            <div>
+                <img class="lazy" src="https://designshack.net/wp-content/uploads/placeholder-image.png" width="700" height="500" data-src="https://cdn.discordapp.com/attachments/535869397974122525/821063547198111794/wp1812612-zootopia-wallpapers.jpeg">
+            </div>
+            <div>
+                <img class="lazy" src="https://designshack.net/wp-content/uploads/placeholder-image.png" width="700" height="500" data-src="https://cdn.discordapp.com/attachments/812702034813911061/813106323981336606/2016-07-23_13.40.41.png">
+            </div>
+            <div>
+                <img class="lazy" src="https://designshack.net/wp-content/uploads/placeholder-image.png" width="700" height="500" data-src="https://cdn.discordapp.com/attachments/812702034813911061/813106203068334141/2016-07-25_12.16.53.png">
+            </div>
+            <div>
+                <img class="lazy" src="https://designshack.net/wp-content/uploads/placeholder-image.png" width="700" height="500" data-src="https://cdn.discordapp.com/attachments/433622486584918017/798989727813599312/IMG_20180503_141946.png">
+            </div>
+            <div>
+                <img class="lazy" src="https://designshack.net/wp-content/uploads/placeholder-image.png" width="700" height="500" data-src="https://cdn.discordapp.com/attachments/608300096798588959/714863942127845476/bad.png">
+            </div>
+            <div>
+                <img class="lazy" src="https://designshack.net/wp-content/uploads/placeholder-image.png" width="700" height="500" data-src="https://cdn.discordapp.com/attachments/608300096798588959/704077981890510938/Grass_Block_Revision_6.png">
+            </div>
+            <div>
+                <img class="lazy" src="https://designshack.net/wp-content/uploads/placeholder-image.png" width="700" height="500" data-src="https://cdn.discordapp.com/attachments/608300096798588959/704070500997005413/anon-D0BBD0B8D181D0B8D186D0B0-D184D18DD0BDD0B4D0BED0BCD18B-5879325.png">
+            </div>
+            <div>
+                <img class="lazy" src="https://designshack.net/wp-content/uploads/placeholder-image.png" width="700" height="500" data-src="https://cdn.discordapp.com/attachments/608300096798588959/702642498975170560/319.jpg">
+            </div>
+            <div>
+                <img class="lazy" src="https://designshack.net/wp-content/uploads/placeholder-image.png" width="700" height="500" data-src="https://cdn.discordapp.com/attachments/608300096798588959/695426303226281994/66f50a4438f86d16fe7cc4303b36b720.png">
+            </div>
+            <div>
+                <img class="lazy" src="https://designshack.net/wp-content/uploads/placeholder-image.png" width="700" height="500" data-src="https://cdn.discordapp.com/attachments/608300096798588959/689204226655780934/79fWP4OPEN4.jpg">
+            </div>
+            <div>
+                <img class="lazy" src="https://designshack.net/wp-content/uploads/placeholder-image.png" width="700" height="500" data-src="https://cdn.discordapp.com/attachments/608300096798588959/687637070663123003/Screenshot_2020-03-07-19-00-56-999_com.instagram.android.png">
+            </div>
+            <div>
+                <img class="lazy" src="https://designshack.net/wp-content/uploads/placeholder-image.png" width="700" height="500" data-src="https://cdn.discordapp.com/attachments/608300096798588959/687632606476501002/4Se_pNMstCk.jpg">
+            </div>
+            <div>
+                <img class="lazy" src="https://designshack.net/wp-content/uploads/placeholder-image.png" width="700" height="500" data-src="https://cdn.discordapp.com/attachments/608300096798588959/687632324292247552/1584014537266_219304672.jpg">
+            </div>
+            <div>
+                <img class="lazy" src="https://designshack.net/wp-content/uploads/placeholder-image.png" width="700" height="500" data-src="https://cdn.discordapp.com/attachments/608300096798588959/687373273486721025/unknown.png">
+            </div>
+            <div>
+                <img class="lazy" src="https://designshack.net/wp-content/uploads/placeholder-image.png" width="700" height="500" data-src="https://cdn.discordapp.com/attachments/608300096798588959/687365446181060609/61453742_ustanovka-windows-na.jpg">
+            </div>
+        </div>
+        <script src="js/script.js"></script>
+    </body>
+</html>

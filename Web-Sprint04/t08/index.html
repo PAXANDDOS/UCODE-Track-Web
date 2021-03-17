@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>RegExp and Cookies</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="description" content="t09. RegExp and Cookies">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+      <h1>RegExp and Cookies</h1>
+      <div class="main">
+          <div class="buttons">
+            <button onclick="parsePhone()">To phone number [<span id="phone">0</span>]</button>
+            <button onclick="wordCount()">Word count [<span id="count">0</span>]</button>
+            <button onclick="wordReplace()">Word replace [<span id="replace">0</span>]</button>
+          </div>
+          <div class="form">
+            <span>Word input:</span>
+            <input id="word" placeholder="Enter single word...">
+            <span>Text input:</span>
+            <textarea rows="12" maxlength="500" id="text" placeholder="Enter text..."></textarea>
+          </div>
+          <div class="archive">
+            <span>Output:</span>
+            <input id="output" type="text" readonly/>
+          </div>
+      </div>
+      <script src="js/script.js"></script>
+    </body>
+</html>

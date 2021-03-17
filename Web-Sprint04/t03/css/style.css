@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+* { box-sizing:border-box }
+.main {
+  max-width: 90%;
+  position: relative;
+  margin: auto;
+}
+
+img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.slide {
+  display: none;
+  -webkit-animation-name: fade;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-duration: .1s;
+  animation-name: fade;
+  animation-duration: .4s;
+  animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.prev, .next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  height: 99.6%;
+  width: 4%;
+  top: 0;
+  text-align: center;
+  display: flex;
+  padding: 25% 16px 16px 16px;
+  color: #ffffff;
+  background: rgba(222, 222, 222, 0.8);
+  font-weight: bold;
+  font-size: 18px;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 0 10px 10px 0;
+}
+.prev {
+  left: 0;
+  border-radius: 10px 0 0 10px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(222, 222, 222,0.8);
+}
+
+.text {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.2em;
+  color: #f2f2f2;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
