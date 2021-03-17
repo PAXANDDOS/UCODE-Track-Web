@@ -41,14 +41,14 @@
         <tr>
             <th>Web-Sprint03</th>
             <th>The OOP principles (encapsulation, polymorphism, and inheritance, etc.). Classes, methods, objects.</th>
-            <th>__.03.2021</th>
-            <th></th>
+            <th>12.03.2021</th>
+            <th>100</th>
         </tr>
         <tr>
             <th>Web-Sprint04</th>
             <th>Third-party API. DOM for accessing the HTML.</th>
-            <th>__.03.2021</th>
-            <th></th>
+            <th>17.03.2021</th>
+            <th>100</th>
         </tr>
         <tr>
             <th>Web-Sprint05</th>
