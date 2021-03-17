@@ -46,7 +46,7 @@
         </tr>
         <tr>
             <th>Web-Sprint04</th>
-            <th>Simple Calculator using actual standards of programming (HTML, CSS, and JavaScript).</th>
+            <th>Third-party API. DOM for accessing the HTML.</th>
             <th>__.03.2021</th>
             <th></th>
         </tr>
@@ -82,7 +82,7 @@
         </tr>
         <tr>
             <th>Web-Race00</th>
-            <th>First MVC project (registration, login, password reminder forms, etc.)</th>
+            <th>Simple Calculator using actual standards of programming (HTML, CSS, and JavaScript).</th>
             <th>__.03.2021</th>
             <th></th>
         </tr>
