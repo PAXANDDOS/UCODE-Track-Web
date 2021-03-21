@@ -1,0 +1,297 @@
+<html lang="en">
+    <head>
+        <title>Simple Calculator</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Simple Calculator using actual standards of programming (HTML, CSS, and JavaScript)">
+        <meta name="keywords" content="UCODE, Full Stack, HTML, CSS, JavaScript, Calculator">
+        <meta name="author" content="Paul Litovka, Mykyta Odarchenko, Andrii Vasylenko">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/media.css" type="text/css">
+        <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/701503404513427466/823147250757926912/calc.png" type="image/x-icon">
+        <script src="https://unpkg.com/mathjs/lib/browser/math.js"></script>
+        <script src="js/vanilla-tilt.js" defer></script>
+        <script src="js/script.js" defer></script>
+    </head>
+    <body>
+        <div class="menu" data-tilt data-tilt-full-page-listening data-tilt-max="7" data-tilt-axis="x" data-tilt-scale="1.1">
+            <div class="card" id="default" onclick='modeSwitcher(id)'>
+                <svg enable-background="new 0 0 24 24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m2.75 0c-1.519 0-2.75 1.231-2.75 2.75v8.75h11.5v-11.5zm4.5 6.75h-1v1c0 .414-.336.75-.75.75s-.75-.336-.75-.75v-1h-1c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h1v-1c0-.414.336-.75.75-.75s.75.336.75.75v1h1c.414 0 .75.336.75.75s-.336.75-.75.75z"/><path d="m0 12.5v8.75c0 1.519 1.231 2.75 2.75 2.75h8.75v-11.5zm7.53 6.47c.293.293.293.768 0 1.061-.146.146-.338.219-.53.219s-.384-.073-.53-.22l-.72-.72-.72.72c-.146.146-.338.22-.53.22s-.384-.073-.53-.22c-.293-.293-.293-.768 0-1.061l.72-.72-.72-.72c-.293-.293-.293-.768 0-1.061s.768-.293 1.061 0l.72.72.72-.72c.293-.293.768-.293 1.061 0s.293.768 0 1.061l-.72.72z"/><path d="m21.25 0h-8.75v11.5h11.5v-8.75c0-1.519-1.231-2.75-2.75-2.75zm-.5 6.5h-4.5c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h4.5c.414 0 .75.336.75.75s-.336.75-.75.75z"/><path d="m12.5 12.5v11.5h8.75c1.519 0 2.75-1.231 2.75-2.75v-8.75zm8 8h-4.5c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h4.5c.414 0 .75.336.75.75s-.336.75-.75.75zm0-3h-4.5c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h4.5c.414 0 .75.336.75.75s-.336.75-.75.75z"/>
+                </svg>
+            </div>
+            <div class="card" id="lengthConvertor" onclick='modeSwitcher(id)'>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 475.975 475.975" style="enable-background:new 0 0 475.975 475.975;" xml:space="preserve">
+                    <path d="M468.552,113.759L362.22,7.424c-9.898-9.899-25.953-9.899-35.85-0.001l-8.688,8.685l43.611,43.61
+                        c4.898,4.898,4.898,12.844,0.001,17.74c-4.897,4.897-12.843,4.898-17.741,0l-43.609-43.61l-29.566,29.566l19.959,19.958
+                        c4.895,4.896,4.896,12.843,0,17.739c-4.897,4.897-12.845,4.896-17.74,0l-19.958-19.958l-29.567,29.566l19.959,19.958
+                        c4.896,4.896,4.896,12.844,0,17.74c-4.896,4.897-12.844,4.896-17.738,0l-19.959-19.958l-29.566,29.566l43.61,43.61
+                        c4.897,4.898,4.897,12.843,0,17.74c-4.897,4.897-12.843,4.897-17.739-0.001l-43.611-43.61l-29.566,29.567l19.959,19.958
+                        c4.895,4.895,4.895,12.842-0.002,17.739c-4.895,4.896-12.842,4.895-17.738-0.001l-19.957-19.958l-29.566,29.566l19.957,19.958
+                        c4.896,4.896,4.896,12.843,0,17.74c-4.896,4.897-12.844,4.896-17.74,0.001l-19.957-19.958l-29.566,29.566l43.609,43.61
+                        c4.898,4.898,4.898,12.843,0.001,17.74c-4.896,4.896-12.843,4.897-17.74-0.001l-43.61-43.61l-8.684,8.685
+                        c-9.899,9.898-9.898,25.951,0,35.849l106.334,106.335c9.897,9.897,25.951,9.898,35.849,0.001l318.945-318.946
+                        C478.45,139.709,478.449,123.656,468.552,113.759z"/>
+                </svg>
+            </div>
+            <div class="card" id="massConvertor" onclick='modeSwitcher(id)'>
+                <svg enable-background="new 0 0 512 512"viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <circle cx="256" cy="347" r="45"/>
+                        <path d="m378.58 195.33c25.06-25.6 59.72-70.59 49.51-115.78-12.88-68.71-102.47-79.05-171.98-79.55h-.22c-69.36.5-159.07 10.69-171.98 79.55-10.21 45.19 24.45 90.18 49.51 115.78-45.65 36.88-72.42 92.32-72.42 151.67 0 65.46 32.58 126.2 87.16 162.49 2.46 1.64 5.35 2.51 8.31 2.51h199.06c2.96 0 5.85-.87 8.31-2.51 54.58-36.29 87.16-97.03 87.16-162.49 0-59.35-26.77-114.79-72.42-151.67zm-122.58 226.67c-41.35 0-75-33.65-75-75s33.65-75 75-75 75 33.65 75 75-33.65 75-75 75zm68.164-257.703c-21.703-8.074-44.853-12.297-68.164-12.297-23.623 0-46.477 4.131-68.19 12.264-20.371-19.214-43.95-43.185-43.95-65.334 0-36.76 75.24-38.92 112.14-38.93 36.84.01 112.14 2.16 112.14 38.93 0 22.11-23.662 46.203-43.976 65.367z"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="card" id="areaConvertor" onclick='modeSwitcher(id)'>
+                <svg viewBox="0 0 512 512.001" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m497.355469 401.644531c19.496093 19.496094 19.496093 51.214844 0 70.710938-.027344.03125-.058594.058593-.089844.089843l-34.210937 33.785157c-3.898438 3.847656-8.976563 5.769531-14.050782 5.769531-5.164062 0-10.320312-1.984375-14.234375-5.945312-7.757812-7.859376-7.679687-20.523438.179688-28.285157l20.015625-19.769531h-320.964844c-44.113281 0-80-35.886719-80-80v-321.449219l-19.953125 19.6875c-7.863281 7.757813-20.527344 7.671875-28.285156-.191406-7.757813-7.863281-7.671875-20.527344.191406-28.285156l33.789063-33.332031c19.441406-19.179688 51.074218-19.179688 70.515624 0l33.789063 33.332031c7.863281 7.757812 7.949219 20.421875.191406 28.285156-3.914062 3.964844-9.074219 5.953125-14.238281 5.953125-5.074219 0-10.148438-1.917969-14.046875-5.761719l-21.953125-21.660156v323.421875c0 22.054688 17.945312 40 40 40h322.992188l-22.042969-21.769531c-7.859375-7.761719-7.941407-20.425781-.179688-28.285157 7.761719-7.855468 20.425781-7.9375 28.285157-.175781l34.210937 33.785157c.03125.03125.0625.058593.089844.089843zm-45.355469-401.644531h-259c-11.074219 0-20.039062 9-20 20.074219.042969 11.015625 8.984375 19.925781 20 19.925781h259c11.046875 0 20 8.953125 20 20v260c0 11.015625 8.910156 19.960938 19.925781 20 11.074219.039062 20.074219-8.925781 20.074219-20v-260c0-33.136719-26.863281-60-60-60zm-158 342.890625c11.046875 0 20-8.953125 20-20v-89.015625c0-30.328125-24.671875-55-55-55-13.285156 0-25.484375 4.734375-35 12.605469-9.515625-7.871094-21.714844-12.605469-35-12.605469-7.628906 0-14.902344 1.566406-21.511719 4.386719-3.558593-3.257813-8.285156-5.261719-13.488281-5.261719-11.046875 0-20 8.953125-20 20v125c0 11.046875 8.953125 20 20 20s20-8.953125 20-20v-89.125c0-8.269531 6.730469-15 15-15s15 6.730469 15 15v89.125c0 11.046875 8.953125 20 20 20s20-8.953125 20-20v-89.125c0-8.269531 6.730469-15 15-15s15 6.730469 15 15v89.015625c0 11.046875 8.953125 20 20 20zm90.75-234.890625c-.105469 0-.207031.015625-.3125.015625-.101562 0-.203125-.015625-.308594-.015625-25.433594 0-46.128906 20.71875-46.128906 46.183594 0 11.042968 8.953125 20 20 20s20-8.957032 20-20c0-3.351563 2.808594-6.183594 6.128906-6.183594.105469 0 .207032-.015625.3125-.015625.101563 0 .203125.015625.308594.015625 3.183594 0 5.894531 2.601562 6.113281 5.769531-.394531 1.464844-3.460937 10.523438-22.625 31.605469-11.886719 13.070312-23.566406 23.714844-23.679687 23.816406-6.121094 5.554688-8.191406 14.304688-5.214844 22.011719 2.976562 7.710937 10.390625 12.796875 18.65625 12.796875h54c11.046875 0 20-8.953125 20-20s-8.953125-20-20-20h-6.878906c17.757812-20.90625 25.757812-36.464844 25.757812-49.816406 0-25.464844-20.695312-46.183594-46.128906-46.183594zm0 0"/>
+                </svg>
+            </div>
+        </div>
+        <div class="container" data-tilt data-tilt-full-page-listening data-tilt-max="4" data-tilt-scale="1.1">
+            <div class="top">
+                <select id="numeralSystem" onchange="systemSwitcher(value)">
+                    <option value="decimal" selected>Decimal</option>
+                    <option value="binary">Binary</option>
+                    <option value="hex">Hex</option>
+                </select>
+                <span id="latestValue"></span>
+            </div>
+            <div class="input">
+                <input type="text" readonly class="value" name="txt" autocomplete="off" placeholder="0"/>
+            </div>
+            <form class="calculator" id="decimal" name="decimalCalc">
+                <div class="buttons">
+                    <button type="button" class="num" value="ms">MS</button>
+                    <button type="button" class="num" value="mr">MR</button>
+                    <button type="button" class="num" value="mc">MC</button>
+                    <button type="button" class="num" value="mplus">M+</button>
+                    <button type="button" class="num" value="mminus">M-</button>
+                    <!-- row -->
+                    <button type="button" class="num" value="%">&percnt;</button>
+                    <button type="button" class="num" value="/">&divide;</button>
+                    <button type="button" class="num" value="*">&times;</button>
+                    <button type="button" class="num" value="-">&minus;</button>
+                    <button type="button" class="num" value="+">&plus;</button>
+                    <!-- row -->
+                    <button type="button" class="num" value="!">x!</button>
+                    <button type="button" class="num" value="7">7</button>
+                    <button type="button" class="num" value="8">8</button>
+                    <button type="button" class="num" value="9">9</button>
+                    <button  type="button"class="num" value="(">(</button>
+                    <!-- row -->
+                    <button type="button" class="num" value="^">x&#8319;</button>
+                    <button type="button" class="num" value="4">4</button>
+                    <button type="button" class="num" value="5">5</button>
+                    <button type="button" class="num" value="6">6</button>
+                    <button type="button" class="num" value=")">)</button>
+                    <!-- row -->
+                    <button type="button" class="num" value="sqrt">&radic;x</button>
+                    <button type="button" class="num" value="1">1</button>
+                    <button type="button" class="num" value="2">2</button>
+                    <button type="button" class="num" value="3">3</button>
+                    <button type="button" class="num" value="=">&equals;</button>
+                    <!-- row -->
+                    <button type="button" class="num" value="clear">AC</button>
+                    <button type="button" class="num" value=".">.</button>
+                    <button type="button" class="num" value="0">0</button>
+                    <button type="button" class="num" value="00">00</button>
+                </div>
+            </form>
+            <form class="calculator" id="binary" name="binaryCalc">
+                <div class="buttons">
+                    <button type="button" class="num" value="ms">MS</button>
+                    <button type="button" class="num" value="mr">MR</button>
+                    <button type="button" class="num" value="mc">MC</button>
+                    <button type="button" class="num" value="mplus">M+</button>
+                    <button type="button" class="num" value="mminus">M-</button>
+                    <!-- row -->
+                    <button disabled type="button" class="num" value="%">&percnt;</button>
+                    <button type="button" class="num" value="/">&divide;</button>
+                    <button type="button" class="num" value="*">&times;</button>
+                    <button type="button" class="num" value="-">&minus;</button>
+                    <button type="button" class="num" value="+">&plus;</button>
+                    <!-- row -->
+                    <button disabled type="button" class="num" value="!">x!</button>
+                    <button disabled type="button" class="num" value="7">7</button>
+                    <button disabled type="button" class="num" value="8">8</button>
+                    <button disabled type="button" class="num" value="9">9</button>
+                    <button type="button"class="num" value="(">(</button>
+                    <!-- row -->
+                    <button disabled type="button" class="num" value="^">x&#8319;</button>
+                    <button disabled type="button" class="num" value="4">4</button>
+                    <button disabled type="button" class="num" value="5">5</button>
+                    <button disabled type="button" class="num" value="6">6</button>
+                    <button type="button" class="num" value=")">)</button>
+                    <!-- row -->
+                    <button disabled type="button" class="num" value="sqrt">&radic;x</button>
+                    <button type="button" class="num" value="1">1</button>
+                    <button disabled type="button" class="num" value="2">2</button>
+                    <button disabled type="button" class="num" value="3">3</button>
+                    <button type="button" class="num" value="=">&equals;</button>
+                    <!-- row -->
+                    <button type="button" class="num" value="clear">AC</button>
+                    <button disabled type="button" class="num" value=".">.</button>
+                    <button type="button" class="num" value="0">0</button>
+                    <button type="button" class="num" value="00">00</button>
+                </div>
+            </form>
+            <form class="calculator" id="hex" name="hexCalc">
+                <div class="buttons">
+                    <button type="button" class="num" value="ms">MS</button>
+                    <button type="button" class="num" value="mr">MR</button>
+                    <button type="button" class="num" value="mc">MC</button>
+                    <button type="button" class="num" value="mplus">M+</button>
+                    <button type="button" class="num" value="mminus">M-</button>
+                    <!-- row -->
+                    <button type="button" class="num" value="clear">AC</button>
+                    <button type="button" class="num" value="/">&divide;</button>
+                    <button type="button" class="num" value="*">&times;</button>
+                    <button type="button" class="num" value="-">&minus;</button>
+                    <button type="button" class="num" value="+">&plus;</button>
+                    <!-- row -->
+                    <button type="button" class="num" value="A">&#65;</button>
+                    <button type="button" class="num" value="7">7</button>
+                    <button type="button" class="num" value="8">8</button>
+                    <button type="button" class="num" value="9">9</button>
+                    <button  type="button"class="num" value="(">(</button>
+                    <!-- row -->
+                    <button type="button" class="num" value="B">&#66;</button>
+                    <button type="button" class="num" value="4">4</button>
+                    <button type="button" class="num" value="5">5</button>
+                    <button type="button" class="num" value="6">6</button>
+                    <button type="button" class="num" value=")">)</button>
+                    <!-- row -->
+                    <button type="button" class="num" value="C">&#67;</button>
+                    <button type="button" class="num" value="1">1</button>
+                    <button type="button" class="num" value="2">2</button>
+                    <button type="button" class="num" value="3">3</button>
+                    <button type="button" class="num" value="=">&equals;</button>
+                    <!-- row -->
+                    <button type="button" class="num" value="D">&#68;</button>
+                    <button type="button" class="num" value="E">&#69;</button>
+                    <button type="button" class="num" value="F">&#70;</button>
+                    <button type="button" class="num" value="0">0</button>
+                </div>
+            </form>
+        </div>
+        <div class="length"  data-tilt data-tilt-full-page-listening data-tilt-max="4" data-tilt-scale="1.1">
+            <form class="convertor" name="conv">
+                <div class="convertation">
+                    <div class="convertFrom">
+                        <select>
+                            <option value="m" selected>m</option>
+                            <option value="mm">mm</option>
+                            <option value="cm">cm</option>
+                            <option value="km">km</option>
+                            <option value="dm">dm</option>
+                        </select>
+                        <input type="number" readonly name="input" autocomplete="off" placeholder="0"/>
+                    </div>
+                    <div class="convertTo">
+                        <select>
+                            <option value="m">m</option>
+                            <option value="mm">mm</option>
+                            <option value="cm">cm</option>
+                            <option value="km"selected>km</option>
+                            <option value="dm">dm</option>
+                        </select>
+                        <input type="number" readonly name="output" autocomplete="off"/>
+                    </div>
+                </div>
+                <div class="numbers">
+                    <button type="button" class="num" value="7">7</button>
+                    <button type="button" class="num" value="8">8</button>
+                    <button type="button" class="num" value="9">9</button>
+                    <!-- row -->
+                    <button type="button" class="num" value="4">4</button>
+                    <button type="button" class="num" value="5">5</button>
+                    <button type="button" class="num" value="6">6</button>
+                    <!-- row -->
+                    <button type="button" class="num" value="1">1</button>
+                    <button type="button" class="num" value="2">2</button>
+                    <button type="button" class="num" value="3">3</button>
+                    <!-- row -->
+                    <button type="button" class="num" value="0">0</button>
+                    <button type="button" class="num" value="clear">AC</button>
+                </div>
+            </form>
+        </div>
+        <div class="mass" data-tilt data-tilt-full-page-listening data-tilt-max="4" data-tilt-scale="1.1">
+            <form class="convertor" name="conv">
+                <div class="convertation">
+                    <div class="convertFrom">
+                        <select>
+                            <option value="g" selected>g</option>
+                            <option value="mg">mg</option>
+                            <option value="kg">kg</option>
+                            <option value="t">t</option>
+                        </select>
+                        <input type="number" readonly name="input" autocomplete="off" placeholder="0"/>
+                    </div>
+                    <div class="convertTo">
+                        <select>
+                            <option value="g">g</option>
+                            <option value="mg">mg</option>
+                            <option value="kg" selected>kg</option>
+                            <option value="t">t</option>
+                        </select>
+                        <input type="number" readonly name="output" autocomplete="off"/>
+                    </div>
+                </div>
+                <div class="numbers">
+                    <button type="button" class="num" value="7">7</button>
+                    <button type="button" class="num" value="8">8</button>
+                    <button type="button" class="num" value="9">9</button>
+                    <!-- row -->
+                    <button type="button" class="num" value="4">4</button>
+                    <button type="button" class="num" value="5">5</button>
+                    <button type="button" class="num" value="6">6</button>
+                    <!-- row -->
+                    <button type="button" class="num" value="1">1</button>
+                    <button type="button" class="num" value="2">2</button>
+                    <button type="button" class="num" value="3">3</button>
+                    <!-- row -->
+                    <button type="button" class="num" value="0">0</button>
+                    <button type="button" class="num" value="clear">AC</button>
+                </div>
+            </form>
+        </div>
+        <div class="area" data-tilt data-tilt-full-page-listening data-tilt-max="4" data-tilt-scale="1.1">
+            <form class="convertor" name="conv">
+                <div class="convertation">
+                    <div class="convertFrom">
+                        <select>
+                            <option value="msquare" selected>m&sup2;</option>
+                            <option value="ksquare">km&sup2;</option>
+                        </select>
+                        <input type="number" readonly name="input" autocomplete="off" placeholder="0"/>
+                    </div>
+                    <div class="convertTo">
+                        <select>
+                            <option value="msquare">m&sup2;</option>
+                            <option value="ksquare" selected>km&sup2;</option>
+                        </select>
+                        <input type="number" readonly name="output" autocomplete="off"/>
+                    </div>
+                </div>
+                <div class="numbers">
+                    <button type="button" class="num" value="7">7</button>
+                    <button type="button" class="num" value="8">8</button>
+                    <button type="button" class="num" value="9">9</button>
+                    <!-- row -->
+                    <button type="button" class="num" value="4">4</button>
+                    <button type="button" class="num" value="5">5</button>
+                    <button type="button" class="num" value="6">6</button>
+                    <!-- row -->
+                    <button type="button" class="num" value="1">1</button>
+                    <button type="button" class="num" value="2">2</button>
+                    <button type="button" class="num" value="3">3</button>
+                    <!-- row -->
+                    <button type="button" class="num" value="0">0</button>
+                    <button type="button" class="num" value="clear">AC</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

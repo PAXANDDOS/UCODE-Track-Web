@@ -1,0 +1,203 @@
+/* Large desktops and laptops */
+@media only screen and (max-width: 1200px) {
+    body {
+        flex-direction: row;
+    }
+    .menu {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "."
+            "."
+            "."
+            "."; 
+        margin-right: 3%;
+    }
+}
+
+/* Portrait tablets and medium desktops */
+@media only screen and (max-width: 992px) {
+    body {
+        flex-direction: row;
+    }
+    .menu {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "."
+            "."
+            "."
+            "."; 
+        margin-right: 3%;
+    }
+    .length {
+        width: 40%;
+    }
+    .mass {
+        width: 40%;
+    }
+    .area {
+        width: 40%;
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media only screen and (max-width: 767px) {
+    body {
+        flex-direction: column;
+    }
+    .menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            ". . . .";
+        margin-right: 0;
+        margin-bottom: 10%;
+    }
+    .card:first-child {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .card:last-child {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .length {
+        width: 50%;
+    }
+    .mass {
+        width: 50%;
+    }
+    .area {
+        width: 50%;
+    }
+}
+
+/* Landscape phones and smaller */
+@media only screen and (max-width: 480px) {
+    body {
+        flex-direction: column;
+    }
+    .menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            ". . . .";
+        margin-right: 0;
+        margin-bottom: 10%;
+    }
+    .card:first-child {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .card:last-child {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .length {
+        width: 70%;
+    }
+    .mass {
+        width: 70%;
+    }
+    .area {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    body {
+        flex-direction: column;
+    }
+    .menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            ". . . .";
+        margin-right: 0;
+        margin-bottom: 12%;
+    }
+    .card:first-child {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .card:last-child {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .container {
+        width: 80%;
+    }
+    .length {
+        width: 70%;
+    }
+    .mass {
+        width: 70%;
+    }
+    .area {
+        width: 70%;
+    }
+}
+
+/* Much smaller */
+@media only screen and (max-width: 320px) {
+    body {
+        flex-direction: column;
+    }
+    .menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            ". . . .";
+        margin-right: 0;
+        margin-bottom: 13%;
+    }
+    .card:first-child {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .card:last-child {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .container {
+        width: 80%;
+    }
+    .length {
+        width: 70%;
+    }
+    .mass {
+        width: 70%;
+    }
+    .area {
+        width: 70%;
+    }
+}

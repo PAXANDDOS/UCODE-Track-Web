@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@200;300;400;500&display=swap');
+
+* {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #16BFFD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #CB3066, #1691fd);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #CB3066, #1691fd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "."
+        "."
+        "."
+        "."; 
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    margin-right: 3%;
+}
+.menu .card {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 20%;
+    transition: .15s cubic-bezier(.3,.01,.3,1.26);
+    transition-property: background-color, color, border, opacity;
+    cursor: pointer;
+}
+.card:first-child {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.card:last-child {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.card:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.card.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    opacity: 0.5;
+}
+.card button, .card button:active, .card button:enabled {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+.card svg {
+    width: 30px;
+    height: 30px;
+    fill: white;
+}
+
+.container {
+    display: flex; /* none - flex */
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    margin-right: 0%;
+}
+
+.calculator, .convertor {
+    width: 100%;
+    height: 100%;
+}
+#decimal {
+    display: block;
+}
+#binary {
+    display: none;
+}
+#hex {
+    display: none;
+}
+.top {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3% 3%;
+}
+.top select {
+    font-weight: 300;
+    font-size: .85em;
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+.top select:active, .top select:enabled {
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
+#latestValue {
+    text-align: end;
+    font-weight: 200;
+    font-size: .8em;
+    color: white;
+    cursor: default;
+}
+
+.input {
+    display: inline-flex;
+    width: 100%;
+    margin: 5% 0;
+    padding: 0 2%;
+}
+.input input {
+    width: 100%;
+    padding: 6%;
+    background-color: rgba(3, 18, 33, 0);
+    box-shadow: none;
+    border: none;
+    color: white;
+    font-weight: 500;
+    font-size: 2em;
+    outline: none;
+    text-align:right;
+    caret-color: rgba(255, 255, 255, 0.05);
+    cursor: default;
+}
+.input input::placeholder {
+    color:white;
+}
+
+.buttons {
+    margin-top: 3%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 2fr 2fr 2fr 2fr 2fr;
+    gap: 0 0;
+    grid-template-areas:
+      ". . . . ."
+      ". . . . ."
+      ". . . . ."
+      ". . . . ."
+      ". . . . ."
+      ". . . . .";
+}
+.buttons button {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    transition: .15s cubic-bezier(.3,.01,.3,1.26);
+    transition-property: background-color, color, border;
+    cursor: pointer;
+}
+.buttons button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.buttons button[value='ms'], .buttons button[value='mr'], .buttons button[value='mc'], .buttons button[value='mplus'], .buttons button[value='mminus'] {
+    font-size: 1em;
+    font-weight: 400;
+}
+.buttons button[value='='] {
+    grid-row: 5 / 7;
+    grid-column: 5;
+    border-bottom-right-radius:  6px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+.buttons button[value='clear'] {
+    border-bottom-left-radius:  6px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+.calculator#binary .buttons button[value='9'],
+.calculator#binary .buttons button[value='8'],
+.calculator#binary .buttons button[value='7'],
+.calculator#binary .buttons button[value='6'],
+.calculator#binary .buttons button[value='5'],
+.calculator#binary .buttons button[value='4'],
+.calculator#binary .buttons button[value='3'],
+.calculator#binary .buttons button[value='2'],
+.calculator#binary .buttons button[value='!'],
+.calculator#binary .buttons button[value='%'],
+.calculator#binary .buttons button[value='^'],
+.calculator#binary .buttons button[value='sqrt'],
+.calculator#binary .buttons button[value='.'] {
+    opacity: 0.2;
+}
+.calculator#hex .buttons button[value='clear'] {
+    border-bottom-left-radius:  0;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+.buttons button[value='=']:hover, .buttons button[value='clear']:hover, .calculator#hex .buttons button[value='clear']:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+.buttons button:active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.4);
+}
+
+
+.num {
+    font-weight: 500;
+    font-size: 1.5em;
+    color: white;
+    padding: 10%;
+    background-color: rgba(230, 230, 250, 0);
+    text-align: center;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
+.num:active {
+    outline: white;
+    background-color: rgba(230, 230, 250, 0.5);
+}
+
+.length {
+    display: none;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    width: 30%;
+}
+.mass {
+    display: none;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    width: 30%;
+}
+.area {
+    display: none;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    width: 30%;
+}
+
+.convertation {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.convertation .convertFrom {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.convertation .convertTo {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.convertation select {
+    width: initial;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 1.3em;
+    font-weight: 600;
+    padding: 5% 2%;
+}
+.convertation input[type=number] {
+    width: inherit;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 1.3em;
+    font-weight: 600;
+    text-align:right;
+    padding: 10% 5%;
+}
+.convertation input[name='input'], .convertation .convertFrom select {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+.convertation input[name='output'] {
+    opacity: 0.6;
+}
+.convertation input::placeholder {
+    color: rgb(255, 255, 255);
+}
+.convertation input::-webkit-outer-spin-button,
+.convertation input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.numbers {
+    width: 100%;
+    height: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". . ."
+        ". . ."
+        ". . ."
+        ". . .";
+}
+.numbers button {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    transition: .15s cubic-bezier(.3,.01,.3,1.26);
+    transition-property: background-color, color, border;
+    cursor: pointer;
+}
+.numbers button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.numbers button[value='0'] {
+    grid-row: 4;
+    grid-column: 1 /3;
+}
+.numbers button[value='clear'] {
+    border-bottom-right-radius:  6px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+.numbers button:active {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.4);
+}
