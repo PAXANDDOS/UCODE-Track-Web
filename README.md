@@ -81,10 +81,10 @@
             <th></th>
         </tr>
         <tr>
-            <th>Web-Race00</th>
+            <th><a href="https://paxanddos.github.io/ucode/calculator/index.html">Web-Race00</a></th>
             <th>Simple Calculator using actual standards of programming (HTML, CSS, and JavaScript).</th>
-            <th>__.03.2021</th>
-            <th></th>
+            <th>21.03.2021</th>
+            <th>140</th>
         </tr>
         <tr>
             <th>Web-Race01</th>
