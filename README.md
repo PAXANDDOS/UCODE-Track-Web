@@ -53,8 +53,8 @@
         <tr>
             <th>Web-Sprint05</th>
             <th>Server-side programming: the basics of PHP.</th>
-            <th>__.03.2021</th>
-            <th></th>
+            <th>23.03.2021</th>
+            <th>100</th>
         </tr>
         <tr>
             <th>Web-Sprint06</th>
