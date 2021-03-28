@@ -59,8 +59,8 @@
         <tr>
             <th>Web-Sprint06</th>
             <th>User data operation.</th>
-            <th>__.03.2021</th>
-            <th></th>
+            <th>28.03.2021</th>
+            <th>100</th>
         </tr>
         <tr>
             <th>Web-Sprint07</th>
