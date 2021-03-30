@@ -45,7 +45,7 @@
             <th>100</th>
         </tr>
         <tr>
-            <th>Web-Sprint04</th>
+            <th><a href="https://paxanddos.github.io/ucode/weatherapp/index.html">Web-Sprint04</a></th>
             <th>Third-party API. DOM for accessing the HTML.</th>
             <th>17.03.2021</th>
             <th>100</th>
