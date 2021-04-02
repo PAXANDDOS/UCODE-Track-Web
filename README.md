@@ -65,8 +65,8 @@
         <tr>
             <th>Web-Sprint07</th>
             <th>Webpage data operations (GET and POST methods, cookies, API).</th>
-            <th>__.03.2021</th>
-            <th></th>
+            <th>02.04.2021</th>
+            <th>100</th>
         </tr>
         <tr>
             <th>Web-Sprint08</th>
