@@ -71,8 +71,8 @@
         <tr>
             <th>Web-Sprint08</th>
             <th>Operations with databases via SQL queries.</th>
-            <th>__.03.2021</th>
-            <th></th>
+            <th>05.04.2021</th>
+            <th>100</th>
         </tr>
         <tr>
             <th>Web-Sprint09</th>
