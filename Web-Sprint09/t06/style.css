@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+* {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #EFEFEF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(140deg, #d8ecfd, #FFF7E4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(140deg, #d8ecfd, #FFF7E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    z-index: 1;
+}
+
+.reminder {
+    display: none; /* flex */
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1%;
+    border-radius: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    min-width: 35vw;
+    min-height: 20vh;
+    backdrop-filter: blur(15px);
+    z-index: 1;
+}
+.reminder h1 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5em;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    margin-bottom: 20px;
+}
+.reminder form {
+    display: flex;
+    flex-direction: column;
+}
+.reminder form label {
+    font-weight: 500;
+    font-size: .9em;
+    color: rgba(0, 0, 0, 0.65);
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    margin-bottom: 5px;
+}
+.reminder form label small{
+    opacity: 0.5;
+}
+.reminder form input[type="text"], .reminder form input[type="password"], .reminder form input[type="email"] {
+    background-color: #EFEFEF;
+    border: none;
+    padding: 2%;
+    color: black;
+    font-size: 1em;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    transition: .2s cubic-bezier(.3,.01,.3,1.26);
+    transition-property: background-color, color, border, opacity;
+    caret-color: rgba(0, 0, 0, 0.5);
+}
+.reminder form input[type="text"]:hover, .reminder form input[type="password"]:hover, .reminder form input[type="email"]:hover {
+    background-color: rgb(211, 234, 255);
+}
+.reminder .submit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reminder form .submit input[type="submit"] {
+    width: 100%;
+    min-height: 40px;
+    border: none;
+    background-color: transparent;
+    font-size: 1.1em;
+    margin-top: 15px;
+    border-radius: 6px;
+    transition: .2s ease;
+    transition-property: background-color, color, border, opacity;
+    cursor: pointer;
+}
+.reminder form .submit input[type="submit"]:hover, .reminder .other a:hover {
+    background-color: rgb(211, 234, 255);
+}
+.reminder form .submit input[type="submit"]:active, .reminder .other a:active {
+    background-color: rgb(211, 234, 255);
+    opacity: 0.5;
+}
+.reminder form .submit input[type="submit"]:enabled, .reminder .other a:enabled, .reminder form input[type="text"]:enabled, .reminder form input[type="email"]:enabled, .reminder form input[type="password"]:enabled {
+    outline: none;
+    border: none;
+}
+.reminder .other {
+    min-height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.reminder .other a {
+    color: black;
+    text-decoration: none;
+    padding: 2%;
+    border-radius: 6px;
+    font-size: .9em;
+    transition: .2s ease;
+    transition-property: background-color, color, border, opacity;
+    cursor: pointer;
+}
+
+.login {
+    display: none; /* flex */
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1%;
+    border-radius: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    min-width: 35vw;
+    min-height: 25vh;
+    backdrop-filter: blur(15px);
+    z-index: 1;
+}
+.login h1 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5em;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    margin-bottom: 20px;
+}
+.login form {
+    display: flex;
+    flex-direction: column;
+}
+.login form label {
+    font-weight: 500;
+    font-size: .9em;
+    color: rgba(0, 0, 0, 0.65);
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    margin-bottom: 5px;
+}
+.login form label small{
+    opacity: 0.5;
+}
+.login form input[type="text"], .login form input[type="password"], .login form input[type="email"] {
+    background-color: #EFEFEF;
+    border: none;
+    padding: 2%;
+    color: black;
+    font-size: 1em;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    transition: .2s cubic-bezier(.3,.01,.3,1.26);
+    transition-property: background-color, color, border, opacity;
+    caret-color: rgba(0, 0, 0, 0.5);
+}
+.login form input[type="text"]:hover, .login form input[type="password"]:hover, .login form input[type="email"]:hover {
+    background-color: rgb(211, 234, 255);
+}
+.login .submit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login form .submit input[type="submit"] {
+    width: 100%;
+    min-height: 40px;
+    border: none;
+    background-color: transparent;
+    font-size: 1.1em;
+    margin-top: 25px;
+    border-radius: 6px;
+    transition: .2s ease;
+    transition-property: background-color, color, border, opacity;
+    cursor: pointer;
+}
+.login form .submit input[type="submit"]:hover, .login .other a:hover {
+    background-color: rgb(211, 234, 255);
+}
+.login form .submit input[type="submit"]:active, .login .other a:active {
+    background-color: rgb(211, 234, 255);
+    opacity: 0.5;
+}
+.login form .submit input[type="submit"]:enabled, .login .other a:enabled, .login form input[type="text"]:enabled, .login form input[type="email"]:enabled, .login form input[type="password"]:enabled {
+    outline: none;
+    border: none;
+}
+.login .other {
+    min-height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12%;
+}
+.login .other a {
+    color: black;
+    text-decoration: none;
+    padding: 3%;
+    border-radius: 6px;
+    font-size: .9em;
+    transition: .2s ease;
+    transition-property: background-color, color, border, opacity;
+    cursor: pointer;
+}
+.message {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    margin-top: 1%;
+    padding: .8% 2%;
+    background-color: white;
+    min-width: 30vw;
+    display: none; /* flex */
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+.message span {
+    width: 100%;
+    text-align: center;
+    color: rgb(103, 38, 47);
+}
+
+.logged {
+    display: flex; /* flex */
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1%;
+    border-radius: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    min-width: 35vw;
+    min-height: 20vh;
+    backdrop-filter: blur(15px);
+    z-index: 1;
+}
+.logged h1 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5em;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    margin-bottom: 20px;
+}
+.logged form {
+    display: flex;
+    flex-direction: column;
+}
+.logged form label {
+    font-weight: 400;
+    font-size: 1.1em;
+    color: rgba(0, 0, 0, 0.8);
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    margin-bottom: 5px;
+}
+.logged form label span{
+    font-weight: 500;
+    color: rgba(0, 0, 0, 1);
+    user-select: all;
+    -moz-user-select: all;
+    -webkit-user-select: all;
+    -ms-user-select: all;
+}
+.logged form label small{
+    opacity: 0.5;
+}
+.logged form input[type="text"], .logged form input[type="password"], .logged form input[type="email"] {
+    background-color: #EFEFEF;
+    border: none;
+    padding: 2%;
+    color: black;
+    font-size: 1em;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    transition: .2s cubic-bezier(.3,.01,.3,1.26);
+    transition-property: background-color, color, border, opacity;
+    caret-color: rgba(0, 0, 0, 0.5);
+}
+.logged form input[type="text"]:hover, .logged form input[type="password"]:hover, .logged form input[type="email"]:hover {
+    background-color: rgb(211, 234, 255);
+}
+.logged .submit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logged form .submit input[type="submit"] {
+    width: 100%;
+    min-height: 40px;
+    border: none;
+    background-color: transparent;
+    font-size: 1.1em;
+    margin-top: 25px;
+    border-radius: 6px;
+    transition: .2s ease;
+    transition-property: background-color, color, border, opacity;
+    cursor: pointer;
+}
+.logged form .submit input[type="submit"]:hover, .logged .other a:hover {
+    background-color: rgb(211, 234, 255);
+}
+.logged form .submit input[type="submit"]:active, .logged .other a:active {
+    background-color: rgb(211, 234, 255);
+    opacity: 0.5;
+}
+.logged form .submit input[type="submit"]:enabled, .logged .other a:enabled, .logged form input[type="text"]:enabled, .logged form input[type="email"]:enabled, .logged form input[type="password"]:enabled {
+    outline: none;
+    border: none;
+}
+
+.register {
+    display: flex; /* flex */
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1%;
+    border-radius: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    min-width: 35vw;
+    min-height: 25vh;
+    backdrop-filter: blur(15px);
+    z-index: 1;
+}
+.register h1 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5em;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    margin-bottom: 20px;
+}
+.register form {
+    display: flex;
+    flex-direction: column;
+}
+.register form label {
+    font-weight: 500;
+    font-size: .9em;
+    color: rgba(0, 0, 0, 0.65);
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    margin-bottom: 5px;
+}
+.register form label small{
+    opacity: 0.5;
+}
+.register form input[type="text"], .register form input[type="password"], .register form input[type="email"] {
+    background-color: #EFEFEF;
+    border: none;
+    padding: 2%;
+    color: black;
+    font-size: 1em;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    transition: .2s cubic-bezier(.3,.01,.3,1.26);
+    transition-property: background-color, color, border, opacity;
+    caret-color: rgba(0, 0, 0, 0.5);
+}
+.register form input[type="text"]:hover, .register form input[type="password"]:hover, .register form input[type="email"]:hover {
+    background-color: rgb(211, 234, 255);
+}
+.register .submit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.register form .submit input[type="submit"] {
+    width: 100%;
+    min-height: 40px;
+    border: none;
+    background-color: transparent;
+    font-size: 1.1em;
+    margin-top: 25px;
+    border-radius: 6px;
+    transition: .2s ease;
+    transition-property: background-color, color, border, opacity;
+    cursor: pointer;
+}
+.register form .submit input[type="submit"]:hover, .register .other a:hover {
+    background-color: rgb(211, 234, 255);
+}
+.register form .submit input[type="submit"]:active, .register .other a:active {
+    background-color: rgb(211, 234, 255);
+    opacity: 0.5;
+}
+.register form .submit input[type="submit"]:enabled, .register .other a:enabled, .register form input[type="text"]:enabled, .register form input[type="email"]:enabled, .register form input[type="password"]:enabled {
+    outline: none;
+    border: none;
+}
+.register .other {
+    min-height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.register .other a {
+    color: black;
+    text-decoration: none;
+    padding: 3%;
+    border-radius: 6px;
+    font-size: .9em;
+    transition: .2s ease;
+    transition-property: background-color, color, border, opacity;
+    cursor: pointer;
+}

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+* {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #EFEFEF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(140deg, #d8ecfd, #FFF7E4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(140deg, #d8ecfd, #FFF7E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    z-index: 1;
+}
+
+.register {
+    display: flex; /* flex */
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1%;
+    border-radius: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    min-width: 35vw;
+    min-height: 25vh;
+    backdrop-filter: blur(15px);
+    z-index: 1;
+}
+.register h1 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5em;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    margin-bottom: 20px;
+}
+.register form {
+    display: flex;
+    flex-direction: column;
+}
+.register form label {
+    font-weight: 500;
+    font-size: .9em;
+    color: rgba(0, 0, 0, 0.65);
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    margin-bottom: 5px;
+}
+.register form label small{
+    opacity: 0.5;
+}
+.register form input[type="text"], .register form input[type="password"], .register form input[type="email"] {
+    background-color: #EFEFEF;
+    border: none;
+    padding: 2%;
+    color: black;
+    font-size: 1em;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    transition: .2s cubic-bezier(.3,.01,.3,1.26);
+    transition-property: background-color, color, border, opacity;
+    caret-color: rgba(0, 0, 0, 0.5);
+}
+.register form input[type="text"]:hover, .register form input[type="password"]:hover, .register form input[type="email"]:hover {
+    background-color: rgb(211, 234, 255);
+}
+.register .submit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.register form .submit input[type="submit"] {
+    width: 100%;
+    min-height: 40px;
+    border: none;
+    background-color: transparent;
+    font-size: 1.1em;
+    margin-top: 25px;
+    border-radius: 6px;
+    transition: .2s ease;
+    transition-property: background-color, color, border, opacity;
+    cursor: pointer;
+}
+.register form .submit input[type="submit"]:hover, .register .other a:hover {
+    background-color: rgb(211, 234, 255);
+}
+.register form .submit input[type="submit"]:active, .register .other a:active {
+    background-color: rgb(211, 234, 255);
+    opacity: 0.5;
+}
+.register form .submit input[type="submit"]:enabled, .register .other a:enabled, .register form input[type="text"]:enabled, .register form input[type="email"]:enabled, .register form input[type="password"]:enabled {
+    outline: none;
+    border: none;
+}
+.message {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    margin-top: 1%;
+    padding: .8% 2%;
+    background-color: white;
+    min-width: 30vw;
+    display: none; /* flex */
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+.message span {
+    width: 100%;
+    text-align: center;
+    color: rgb(103, 38, 47);
+}

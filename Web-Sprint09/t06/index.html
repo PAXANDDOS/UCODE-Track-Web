@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="TBA">
+        <meta name="keywords" content="UCODE, Full Stack, HTML, CSS, JavaScript, PHP, SQL, MySQL, Frontend, Backend">
+        <meta name="author" content="Paul Litovka">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="shortcut icon" href="" type="image/x-icon">
+        <script src="script.js" defer type="text/JavaScript"></script>
+    </head>
+    <body>
+        <div class="message">
+            <span id="messageValue">Error goes here</span>
+        </div>
+        <div class="register">
+            <h1>Become a part!</h1>
+            <form action="register.php" method="post" id="registerForm">
+                <label>Username</label>
+                <input type="text" name="username" id="username" placeholder="" pattern="^[A-Za-z0-9]+$" required>
+                <label>Full Name</label>
+                <input type="text" name="name" id="name" placeholder="" pattern="^[A-Za-zА-Яа-яЁё\s]+$" required>
+                <label>Email Address</label>
+                <input type="email" name="email" id="email" placeholder="" required>
+                <label>Password <small>(Minimum eight characters, at least one letter and one number)</small></label>
+                <input type="password" name="password" id="password" placeholder="" pattern='^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$' required>
+                <label>Confirm Password</label>
+                <input type="password" name="conpassword" id="conpassword" placeholder="" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" required>
+                <div class="submit"><input type="submit" value="Register"></div>
+            </form>
+            <div class="other">
+                <a onclick="changeScreen('login')">Already have an account?</a>
+            </div>
+        </div>
+        <div class="login">
+            <h1>Welcome back!</h1>
+            <form action="login.php" method="post" id="loginForm">
+                <label>Username</label>
+                <input type="text" name="username" id="username" placeholder="" pattern="^[A-Za-z0-9]+$" required>
+                <label>Password</label>
+                <input type="password" name="password" id="password" placeholder="" pattern='^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$' required>
+                <div class="submit"><input type="submit" value="Login"></div>
+            </form>
+            <div class="other">
+                <a onclick="changeScreen('register')">Need an account?</a>
+                <a onclick="changeScreen('reminder')">Forgot password?</a>
+            </div>
+        </div>
+        <div class="reminder">
+            <h1>Let's get your password back!</h1>
+            <form action="reminder.php" method="post" id="reminderForm">
+                <label>Username</label>
+                <input type="text" name="username" id="username" placeholder="" pattern="^[A-Za-z0-9]+$" required>
+                <div class="submit"><input type="submit" value="Send new password"></div>
+            </form>
+            <div class="other">
+                <a onclick="changeScreen('login')">Back</a>
+            </div>
+        </div>
+    </body>
+</html>
