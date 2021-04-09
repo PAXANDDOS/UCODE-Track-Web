@@ -77,8 +77,8 @@
         <tr>
             <th>Web-Sprint09</th>
             <th>First MVC project (registration, login, password reminder forms, etc.)</th>
-            <th>__.04.2021</th>
-            <th></th>
+            <th>09.04.2021</th>
+            <th>100</th>
         </tr>
         <tr>
             <th><a href="https://paxanddos.github.io/ucode/calculator/index.html">Web-Race00</a></th>
