@@ -1,0 +1,28 @@
+body {
+    min-height: 100vh;
+    background-image: url("../../../assets/images/desk1.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(150px);
+}
+.body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+.body h1 {
+    font-size: 10em;
+    font-weight: 800;
+    color: #73c9ff;
+    line-height: 80%;
+}
+.body span {
+    font-size: 2em;
+    font-weight: 400;
+    color: rgba(115, 201, 255, 0.6);
+}
