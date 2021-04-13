@@ -112,3 +112,29 @@ body {
 .window .other a:hover {
     color: rgb(0, 146, 237);
 }
+
+.message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(50, 39, 59, 0.6);
+    padding: 1%;
+    border-radius: 3px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+    min-width: 360px;
+    min-height: 20px;
+    z-index: 1;
+    margin-bottom: 4px;
+}
+.message label {
+    text-align: center;
+    
+}
+.error {
+    border: 1px solid rgba(255, 138, 138, 0.9);
+    color: rgba(255, 138, 138, 0.9);
+}
+.action {
+    border: 1px solid rgb(0, 146, 237);
+    color: rgb(0, 146, 237);
+}

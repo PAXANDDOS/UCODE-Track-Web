@@ -1,6 +1,6 @@
 <?php
 
-class Controller_404 extends Controller
+class Controller_board extends Controller
 {
 	function __construct()
 	{
@@ -8,12 +8,12 @@ class Controller_404 extends Controller
 	}
 	function action_index($data)
 	{	
-		$this->view->generate('404_view.php', 'template_view.php', $data);
+		$this->view->generate('board_view.php', 'template_view.php', $data);
 	}
 }
 
 $data = null;
-$temp = new Controller_404;
+$temp = new Controller_board;
 $temp->action_index($data);
 
 ?>

@@ -1,0 +1,108 @@
+.enemy_board {
+    width: 100%;
+    height: 50%;
+    background-color: rosybrown;
+}
+.enemy_hand {
+    width: 100%;
+    height: 15%;
+    background-color: coral;
+    display: flex;
+    justify-content: center;
+}
+.enemy_hand .enemy_handInner {
+   min-width: 25%;
+   height: 100%;
+   background-color: red;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+.enemy_hand .enemy_handInner .enemy_handCard {
+    height: 100%;
+    width: 100px;
+    background-image: url("/assets/images/Card_back-Default.png");
+    background-size: 100% 100%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.enemy_stat {
+    width: 100%;
+    height: 35%;
+    background-color: chocolate;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.enemy_stat .enemy_statInner {
+    height: 100%;
+    width: 180px;
+    background-color: sienna;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.enemy_stat .enemy_statInner .enemy_statLogo {
+    width: 120px;
+    height: 120px;
+    z-index: 1;
+}
+.enemy_stat .enemy_statInner .enemy_statLogo img {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.enemy_stat .enemy_statInner .enemy_statLogo .enemy_statHealth {
+    display: flex;
+    position: absolute;
+    margin-left: 105px;
+    margin-top: -25px;
+    z-index: 2;
+    background-color: rgb(218, 16, 19);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 1px;
+    transform: rotate(45deg);
+    box-shadow: inset 3px 3px 1px rgb(89, 5, 22);
+}
+.enemy_stat .enemy_statInner .enemy_statLogo span {
+    color: white;
+    font-weight: 500;
+    font-size: 1.1em;
+    transform: rotate(-45deg);
+}
+.enemy_stat .enemy_statInner .enemy_statName label {
+    color: rgb(227, 227, 227);
+    font-weight: 400;
+    font-size: 1.2em;
+}
+.enemy_stat .enemy_statInner .enemy_statStones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: initial;
+    background-color: rgb(37, 77, 198);
+    border-radius: 20px;
+}
+.enemy_stat .enemy_statInner .enemy_statStones label {
+    color:rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.enemy_deck {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(220, 20, 60, 0.5);
+}

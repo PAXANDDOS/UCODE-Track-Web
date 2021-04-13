@@ -1,6 +1,7 @@
 <?php
 
-class User extends Model {
+require_once 'application/models/Model_database.php';
+class User extends Model_database {
     public $id;
     public $username;
     public $password;
@@ -14,17 +15,37 @@ class User extends Model {
         $this->connection = null;
     }
 
-    public function find($id)
+    public function findUsername($username)
     {
         if ($this->connection->getConnectionStatus()) {
-            $result = $this->connection->connection->query("SELECT * FROM $this->table WHERE id=$id");
+            $result = $this->connection->connection->query("SELECT * FROM $this->table WHERE username='$username'");
             $pdo = $result->fetch(PDO::FETCH_ASSOC);
             if ($pdo) {
-                $this->id = $pdo["id"];
-                $this->username = $pdo["username"];
-                $this->password = $pdo["password"];
-                $this->name = $pdo["name"];
-                $this->email = $pdo["email"]; 
+                if($username == $pdo["username"])
+                    return true;
+                else return false;
+                //$this->id = $pdo["id"];
+                //$this->username = $pdo["username"];
+                // $this->password = $pdo["password"];
+                // $this->name = $pdo["name"];
+                // $this->email = $pdo["email"]; 
+            }
+        }
+    }
+    public function findEmail($email)
+    {
+        if ($this->connection->getConnectionStatus()) {
+            $result = $this->connection->connection->query("SELECT * FROM $this->table WHERE email='$email'");
+            $pdo = $result->fetch(PDO::FETCH_ASSOC);
+            if ($pdo) {
+                if($email == $pdo["email"])
+                    return true;
+                else return false;
+                // $this->id = $pdo["id"];
+                // $this->username = $pdo["username"];
+                // $this->password = $pdo["password"];
+                // $this->name = $pdo["name"];
+                // $this->email = $pdo["email"]; 
             }
         }
     }
@@ -62,17 +83,12 @@ class User extends Model {
         if ($this->connection->getConnectionStatus()) {
             $result = $this->connection->connection->query("SELECT * FROM $this->table WHERE username='$this->username'");
             $pdo = $result->fetch(PDO::FETCH_ASSOC);
-            if (!$pdo)
-                echo '<script>alert("No user found in database!");</script>';
-            else {
-                $email = $pdo['email'];
-                $pass = substr($pdo['password'], 0, 9);
-                $passHash = md5($pass);
-                $text = "\nYou have requested a renewal of your password.\nDo not give your password to anyone!\n\nYour new password is $pass\n\nDon't lose it anymore;)\n";
-                mail($email, "Password reminder.", $text);
-                echo ("<script>alert(\"Your new password was sent to $email\");</script>");
-                $this->update($pdo['username'], $pdo['name'], $pdo['email'], $passHash);
-            }
+            $email = $pdo['email'];
+            $pass = substr($pdo['password'], 0, 9);
+            $passHash = md5($pass);
+            $text = "\nYou have requested a renewal of your password.\nDo not give your password to anyone!\n\nYour new password is $pass\n\nDon't lose it anymore;)\n";
+            mail($email, "Password reminder.", $text);
+            $this->update($pdo['username'], $pdo['name'], $pdo['email'], $passHash);
         }
     }
     public function update($username, $name, $email, $password)
@@ -87,21 +103,16 @@ class User extends Model {
             $stmt->execute();
         }
     }
-    public function check()
+    public function checkPass($username, $password)
     {
         if ($this->connection->getConnectionStatus()) {
-            $result = $this->connection->connection->query("SELECT * FROM $this->table WHERE username='$this->username'");
+            $result = $this->connection->connection->query("SELECT * FROM $this->table WHERE username='$username'");
             $pdo = $result->fetch(PDO::FETCH_ASSOC);
-            if (!$pdo) {
-
+            if($pdo['password'] == $password) {
+                return true;
             }
             else {
-                if($pdo['password'] == $this->password) {
-                    
-                }
-                else {
-                    
-                }
+                return false;
             }
         }
     }

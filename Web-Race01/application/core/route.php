@@ -37,7 +37,7 @@ class Route
 		// echo $model_name . "<br>";
 		// echo $controller_name . "<br>";
 		// echo $action_name . "<br>";
-		sleep(1);
+		// sleep(1);
 		// подцепляем файл с классом контроллера
 		$controller_file = strtolower($controller_name).'.php';
 		$controller_path = "application/controllers/".$controller_file;
