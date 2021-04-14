@@ -12,8 +12,13 @@ class Controller_404 extends Controller
 	}
 }
 
-$data = null;
-$temp = new Controller_404;
-$temp->action_index($data);
+if(isset($_POST['back'])){
+	echo '<script>location.replace("/");</script>';
+}
+else {
+	$data = null;
+	$temp = new Controller_404;
+	$temp->action_index($data);
+}
 
 ?>

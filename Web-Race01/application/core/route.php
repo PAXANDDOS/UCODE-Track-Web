@@ -27,7 +27,6 @@ class Route
 		$action_name = 'action_'.$action_name;
 
 		// подцепляем файл с классом модели (файла модели может и не быть)
-
 		$model_file = strtolower($model_name).'.php';
 		$model_path = "application/models/".$model_file;
 		if(file_exists($model_path)) {
@@ -38,19 +37,15 @@ class Route
 		// echo $controller_name . "<br>";
 		// echo $action_name . "<br>";
 		// sleep(1);
+
 		// подцепляем файл с классом контроллера
 		$controller_file = strtolower($controller_name).'.php';
 		$controller_path = "application/controllers/".$controller_file;
 		if(file_exists($controller_path)) {
 			include "application/controllers/".$controller_file;
 		}
-		else {
-			/*
-			правильно было бы кинуть здесь исключение,
-			но для упрощения сразу сделаем редирект на страницу 404
-			*/
+		else
 			Route::ErrorPage404();
-		}
 		
 		// // создаем контроллер
 		// $controller = new $controller_name;

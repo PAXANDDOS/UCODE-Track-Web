@@ -12,8 +12,18 @@ class Controller_board extends Controller
 	}
 }
 
-$data = null;
-$temp = new Controller_board;
-$temp->action_index($data);
+if(!isset($_SESSION['login'])) {
+	echo '<script>location.replace("/login");</script>';
+}
+else {
+	$data = array(
+		"username" => $_SESSION['login'],
+		"avatar" => $_SESSION['avatar'],
+		"enemyUsername" => 'Bababoy', // Сюда юзернейм врага
+		"enemyAvatar" => 6	// Сюда номер аватара врага	
+	);
+	$temp = new Controller_board;
+	$temp->action_index($data);
+}
 
 ?>

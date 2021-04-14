@@ -1,19 +1,18 @@
 .enemy_board {
     width: 100%;
     height: 50%;
-    background-color: rosybrown;
 }
 .enemy_hand {
     width: 100%;
     height: 15%;
-    background-color: coral;
+    background-color: transparent;
     display: flex;
     justify-content: center;
 }
 .enemy_hand .enemy_handInner {
    min-width: 25%;
    height: 100%;
-   background-color: red;
+   /* background-color: red; */
    display: flex;
    flex-direction: row;
    justify-content: center;
@@ -21,7 +20,7 @@
 .enemy_hand .enemy_handInner .enemy_handCard {
     height: 100%;
     width: 100px;
-    background-image: url("/assets/images/Card_back-Default.png");
+    background-image: url("/assets/images/cardback-half.gif");
     background-size: 100% 100%;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -30,7 +29,7 @@
 .enemy_stat {
     width: 100%;
     height: 35%;
-    background-color: chocolate;
+    /* background-color: chocolate; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -38,7 +37,7 @@
 .enemy_stat .enemy_statInner {
     height: 100%;
     width: 180px;
-    background-color: sienna;
+    /* background-color: sienna; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -104,5 +103,4 @@
     align-items: center;
     width: 100%;
     height: 50%;
-    background-color: rgba(220, 20, 60, 0.5);
 }

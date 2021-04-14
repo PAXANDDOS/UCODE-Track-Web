@@ -4,7 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url("../../../assets/images/desk1.jpeg");
+    background-image: url("../../../assets/images/neon.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,19 +14,20 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: rgba(50, 39, 59, 0.6);
+    background-color: rgba(50, 39, 59, 0.35);
     padding: 1%;
     border-radius: 3px;
     border: 1px solid rgba(255, 255, 255, 0.4);
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
     z-index: 1;
     min-width: 420px;
+    backdrop-filter: blur(15px);
 }
 .window h1 {
     font-weight: 500;
     text-align: center;
     margin-bottom: 30px;
-    color: white
+    color: white;
 }
 .window h1 b {
     font-weight: 700;
@@ -41,7 +42,6 @@ body {
     height: 200px;
     animation: avatarBorder 2s infinite;
     border-radius: 3px;
-    background-color: white;
 }
 .avatarBox img {
     width: 100%;
@@ -69,7 +69,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(50, 39, 59, 0.6);
+    background-color: rgba(50, 39, 59, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.4);
     width: 100%;
     min-height: 50px;
@@ -78,11 +78,12 @@ body {
     color: white;
     box-shadow:  2px 2px 10px rgba(0, 0, 0, 0.3);
     border-radius: 3px;
-    transition: .1s ease;
+    transition: .2s ease;
     transition-property: background-color, color, border, opacity, box-shadow;
 }
 .window .profile .buttons form input[type="submit"]:hover {
-    background-color: rgba(50, 39, 59, 0.8);
+    background-color: rgba(74, 57, 87, 0.8);
+    border: 1px solid rgba(196, 167, 255, 0.8);
 }
 .window .profile .buttons form input[type="submit"]:active {
     box-shadow:  2px 2px 10px rgba(0, 0, 0, 0.1);
@@ -102,13 +103,13 @@ body {
 
 @keyframes avatarBorder {
     0% {
-        border: 2px solid rgba(255, 255, 255, 0.4);
+        border: 2px solid rgba(255, 255, 255, 0.3);
     }
     50% {
-        border: 2px solid rgba(255, 255, 255, 0.8);
+        border: 2px solid rgba(255, 255, 255, 0.65);
     }
     100% {
-        border: 2px solid rgba(255, 255, 255, 0.4);
+        border: 2px solid rgba(255, 255, 255, 0.3);
     }
 }
 

@@ -1,16 +1,9 @@
 <style>@import url('/assets/css/lobby.css');</style>
-<?php if(isset($error)) 
-    echo('
-    <div class="window message error unselectable">
-        <label>'.$error.'</label>
-    </div>
-    ');
-?>
 <section class="window">
     <h1 class="unselectable">Welcome to <br>Marvel <b>Heroes of the Earth-199999<b>!</h1>
     <div class="profile">
         <div class="avatarBox">
-            <img class="unselectable" src="/assets/images/fury.jpeg">
+            <img src="/assets/images/cards/<?php echo $avatar ?>.jpeg">
         </div>
         <div class="buttons unselectable">
             <form method="post">
@@ -30,9 +23,9 @@
             <label>Total loses:</label>
         </div>
         <div class="data">
-            <label>0</label>
-            <label>0</label>
-            <label>0</label>
+            <label><?php echo $totalGames ?></label>
+            <label><?php echo $totalWins ?></label>
+            <label><?php echo $totalLoses ?></label>
         </div>
     </div>
 </section>

@@ -38,13 +38,23 @@ function registrate($class, $data, $username, $name, $email, $password, $conpass
 		return;
 	}
 
+
+	$directory = getcwd()."/assets/images/cards/";
+	$filecount = 0;
+	$files2 = glob( $directory ."*" );
+	if( $files2 )
+		$filecount = count($files2);
+	$avatar_name = rand(1,$filecount);
+
 	$heroes->username = trim($username);
 	$heroes->name = trim($name);
 	$heroes->email = trim($email);
 	$heroes->password = md5($password);
+	$heroes->avatar_name = $avatar_name;
 	$heroes->save();
 
 	$_SESSION['login'] = trim($username);
+	$_SESSION['avatar'] = $avatar_name;
 	echo '<script>location.replace("/lobby");</script>';
 }
 

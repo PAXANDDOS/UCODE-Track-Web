@@ -1,43 +1,22 @@
 .player_board {
     width: 100%;
     height: 50%;
-    background-color: yellowgreen;
+    /* background-color: yellowgreen; */
 }
 
-.player_hand {
+.player_deck {
     width: 100%;
-    height: 30%;
-    background-color: palegreen;
-    display: flex;
-    justify-content: center;
-}
-.player_hand .player_handInner {
-    min-width: 25%;
-    height: 100%;
-    background-color: green;
+    height: 40%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-}
-.player_hand .player_handInner .player_handCard {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    height: 100%;
-    width: 130px;
-    background-color: silver;
 }
 
 .player_stat {
     width: 100%;
-    height: 30%;
-    background-color: lightsteelblue;
-}
-.player_stat {
-    width: 100%;
     height: 35%;
-    background-color: chocolate;
+    /* background-color: lightsteelblue; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -45,7 +24,7 @@
 .player_stat .player_statInner {
     height: 100%;
     width: 180px;
-    background-color: sienna;
+    /* background-color: sienna; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -93,24 +72,67 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 30%;
-    height: initial;
-    background-color: rgb(37, 77, 198);
-    border-radius: 20px;
-    margin-top: 8px;
+    width: 46px;
+    height: 46px;
+    background-size: 100%;
+    z-index: 2;
+    margin-left: -16px;
+    margin-top: -30px;
 }
-.player_stat .player_statInner .player_statStones label {
-    color:rgb(255, 255, 255);
+.player_stat .player_statInner .player_statStones img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.8);
+}
+.player_stat .player_statInner .player_statStones span#player_currentStones {
+    color:white;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 20px;
+    transform: rotate(0);
+    position: absolute;
+    z-index: 2;
 }
 
-.player_deck {
+.player_hand {
     width: 100%;
-    height: 40%;
-    background-color: royalblue;
+    height: 30%;
+    /* background-color: palegreen; */
+    display: flex;
+    justify-content: center;
+}
+.player_hand .player_handInner {
+    min-width: 25%;
+    height: 100%;
+    /* background-color: green; */
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+.player_hand .player_handInner .player_handCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    height: 100%;
+    width: 130px;
+    background-color: silver;
+}
+.player_hand .player_handInner .player_handCard .handcardImage {
+    height: 45%;
+    width: 50%;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+.player_hand .player_handInner .player_handCard .handcardImage img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.player_hand .player_handInner .player_handCard label {
+    font-weight: 600;
+    font-size: 15px;
+}
+.player_hand .player_handInner .player_handCard span {
+    font-weight: 300;
+    font-size: 8px;
 }

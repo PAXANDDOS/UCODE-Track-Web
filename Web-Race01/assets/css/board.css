@@ -3,14 +3,21 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: whitesmoke;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/assets/images/bg.png");
+    backdrop-filter: brightness(0.5);
 }
 
 main {
     width: 90vw;
     height: 88vh;
-    background-color: wheat;
     display: block;
+    border-radius: 20px;
+    background-image: url("/assets/images/dirt.png");
+    background-size: 100%;
+    backdrop-filter: blur(100px);
 }
 
 .entity_card {

@@ -33,6 +33,14 @@ abstract class Model_database
     abstract public function checkPass($username, $password);
     abstract public function renew();
     abstract public function update($username, $name, $email, $password);
+    abstract public function getAvatar($username);
+    abstract public function getTotalGames($username);
+    abstract public function getTotalWins($username);
+    abstract public function getTotalLoses($username);
+    abstract public function incrementTotalGames($username);
+    abstract public function incrementTotalWins($username);
+    abstract public function incrementTotalLoses($username);
+    abstract public function updateAvatar($username, $avatar_name);
 
     public function __construct($table) {
         $this->setConnection();
@@ -43,7 +51,7 @@ abstract class Model_database
         $this->table = $table;
     }
     protected function setConnection() {
-        $this->connection = new DatabaseConnection('localhost', null, 'marvel', 'securepass', 'cardgame');
+        $this->connection = new DatabaseConnection('localhost', null, 'marvel', 'securepass', 'marvel_heroes');
     }
 }
 

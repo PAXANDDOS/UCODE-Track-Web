@@ -7,6 +7,7 @@ class User extends Model_database {
     public $password;
     public $name;
     public $email;
+    public $avatar_name;
 
     public function __construct() {
         parent::__construct("users");
@@ -24,11 +25,6 @@ class User extends Model_database {
                 if($username == $pdo["username"])
                     return true;
                 else return false;
-                //$this->id = $pdo["id"];
-                //$this->username = $pdo["username"];
-                // $this->password = $pdo["password"];
-                // $this->name = $pdo["name"];
-                // $this->email = $pdo["email"]; 
             }
         }
     }
@@ -41,11 +37,6 @@ class User extends Model_database {
                 if($email == $pdo["email"])
                     return true;
                 else return false;
-                // $this->id = $pdo["id"];
-                // $this->username = $pdo["username"];
-                // $this->password = $pdo["password"];
-                // $this->name = $pdo["name"];
-                // $this->email = $pdo["email"]; 
             }
         }
     }
@@ -63,18 +54,20 @@ class User extends Model_database {
                 $this->password = null;
                 $this->name = null;
                 $this->email = null;
+                $this->avatar_name = null;
             }
         }
     }
     public function save()
     {
         if ($this->connection->getConnectionStatus()) {
-            $sql = "INSERT INTO `users` (username, name, email, password) VALUES (:username, :name, :email, :password)";
+            $sql = "INSERT INTO `users` (username, name, email, password, avatar_name) VALUES (:username, :name, :email, :password, :avatar_name)";
             $stmt = $this->connection->connection->prepare($sql);
             $stmt->bindParam(":username", $this->username);
             $stmt->bindParam(":name", $this->name);
             $stmt->bindParam(":email", $this->email);
             $stmt->bindParam(":password", $this->password);
+            $stmt->bindParam(":avatar_name", $this->avatar_name);
             $stmt->execute();
         }
     }
@@ -108,12 +101,92 @@ class User extends Model_database {
         if ($this->connection->getConnectionStatus()) {
             $result = $this->connection->connection->query("SELECT * FROM $this->table WHERE username='$username'");
             $pdo = $result->fetch(PDO::FETCH_ASSOC);
-            if($pdo['password'] == $password) {
+            if($pdo['password'] == $password)
                 return true;
-            }
-            else {
+            else
                 return false;
-            }
+        }
+    }
+    public function getAvatar($username) {
+        if ($this->connection->getConnectionStatus()) {
+            $result = $this->connection->connection->query("SELECT avatar_name FROM $this->table WHERE username='$username'");
+            $pdo = $result->fetch(PDO::FETCH_ASSOC);
+            return $pdo['avatar_name'];
+        }
+    }
+    public function getTotalGames($username) {
+        if ($this->connection->getConnectionStatus()) {
+            $result = $this->connection->connection->query("SELECT total_games FROM $this->table WHERE username='$username'");
+            $pdo = $result->fetch(PDO::FETCH_ASSOC);
+            if(isset($pdo['total_games']))
+                return $pdo['total_games'];
+        }
+    }
+    public function getTotalWins($username) {
+        if ($this->connection->getConnectionStatus()) {
+            $result = $this->connection->connection->query("SELECT total_wins FROM $this->table WHERE username='$username'");
+            $pdo = $result->fetch(PDO::FETCH_ASSOC);
+            if(isset($pdo['total_wins']))
+                return $pdo['total_wins'];
+        }
+    }
+    public function getTotalLoses($username) {
+        if ($this->connection->getConnectionStatus()) {
+            $result = $this->connection->connection->query("SELECT total_loses FROM $this->table WHERE username='$username'");
+            $pdo = $result->fetch(PDO::FETCH_ASSOC);
+            if(isset($pdo['total_loses']))
+                return $pdo['total_loses'];
+        }
+    }
+    public function incrementTotalGames($username) {
+        if ($this->connection->getConnectionStatus()) {
+            $result = $this->connection->connection->query("SELECT total_games FROM $this->table WHERE username='$username'");
+            $pdo = $result->fetch(PDO::FETCH_ASSOC);
+            $totalGames = $pdo['total_games'];
+            $totalGames += 1;
+
+            $sql = "UPDATE $this->table SET total_games=:total_games WHERE username=:username";
+            $stmt = $this->connection->connection->prepare($sql);
+            $stmt->bindParam(":username", $username);
+            $stmt->bindParam(":total_games", $totalGames);
+            $stmt->execute();
+        }
+    }
+    public function incrementTotalWins($username) {
+        if ($this->connection->getConnectionStatus()) {
+            $result = $this->connection->connection->query("SELECT total_wins FROM $this->table WHERE username='$username'");
+            $pdo = $result->fetch(PDO::FETCH_ASSOC);
+            $totalWins = $pdo['total_wins'];
+            $totalWins += 1;
+
+            $sql = "UPDATE $this->table SET total_wins=:total_wins WHERE username=:username";
+            $stmt = $this->connection->connection->prepare($sql);
+            $stmt->bindParam(":username", $username);
+            $stmt->bindParam(":total_wins", $totalWins);
+            $stmt->execute();
+        }
+    }
+    public function incrementTotalLoses($username) {
+        if ($this->connection->getConnectionStatus()) {
+            $result = $this->connection->connection->query("SELECT total_loses FROM $this->table WHERE username='$username'");
+            $pdo = $result->fetch(PDO::FETCH_ASSOC);
+            $totalLoses = $pdo['total_loses'];
+            $totalLoses += 1;
+
+            $sql = "UPDATE $this->table SET total_loses=:total_loses WHERE username=:username";
+            $stmt = $this->connection->connection->prepare($sql);
+            $stmt->bindParam(":username", $username);
+            $stmt->bindParam(":total_loses", $totalLoses);
+            $stmt->execute();
+        }
+    }
+    public function updateAvatar($username, $avatar_name) {
+        if ($this->connection->getConnectionStatus()) {
+            $sql = "UPDATE $this->table SET avatar_name=:avatar_name WHERE username=:username";
+            $stmt = $this->connection->connection->prepare($sql);
+            $stmt->bindParam(":username", $username);
+            $stmt->bindParam(":avatar_name", $avatar_name);
+            $stmt->execute();
         }
     }
 }

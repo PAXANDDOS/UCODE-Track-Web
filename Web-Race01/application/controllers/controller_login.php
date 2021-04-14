@@ -31,6 +31,7 @@ function login($class, $data, $username, $password) {
 	}
 
 	$_SESSION['login'] = $username;
+	$_SESSION['avatar'] = $heroes->getAvatar($username);
 	echo '<script>location.replace("/lobby");</script>';
 }
 
