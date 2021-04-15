@@ -2,88 +2,64 @@
 <style>@import url('/assets/css/board_enemy.css');</style>
 <style>@import url('/assets/css/board_player.css');</style>
 <script src="/assets/js/vanilla-tilt.js" defer></script>
-<main>
+<style>@import url('/assets/css/search.css');</style>
+<div class="searchScreen window unselectable">
+	<div class="searchAnim">
+		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+			<circle cx="28" cy="75" r="11" fill="#9d6cff">
+				<animate attributeName="fill-opacity" repeatCount="indefinite" dur="1.25s" values="0;1;1" keyTimes="0;0.2;1" begin="0s"></animate>
+			</circle>
+			<path d="M28 47A28 28 0 0 1 56 75" fill="none" stroke="#b38dff" stroke-width="10">
+				<animate attributeName="stroke-opacity" repeatCount="indefinite" dur="1.25s" values="0;1;1" keyTimes="0;0.2;1" begin="0.125s"></animate>
+			</path>
+			<path d="M28 25A50 50 0 0 1 78 75" fill="none" stroke="#c4a7ff" stroke-width="10">
+				<animate attributeName="stroke-opacity" repeatCount="indefinite" dur="1.25s" values="0;1;1" keyTimes="0;0.2;1" begin="0.25s"></animate>
+				</path>
+		</svg>
+	</div>
+	<h1 id="insearch" >Waiting for evil to rise...</h1>
+	<form method="post">
+		<input type="submit" name="cancelSearch" value="I'm not ready">
+	</form>
+</div>
+
+<script src="assets/js/socket.js" defer type="text/JavaScript"></script>
+<script src="assets/js/parser.js" defer type="text/JavaScript"></script>
+
+<main id="mainGame">
+    <input id="endturn" type="submit" value="END TURN">
     <div class="enemy_board unselectable">
         <section class="enemy_hand">
             <div class="enemy_handInner">
-                <div class="enemy_handCard"></div>
-                <div class="enemy_handCard"></div>
-                <div class="enemy_handCard"></div>
-                <div class="enemy_handCard"></div>
-                <div class="enemy_handCard"></div>
             </div>
         </section>
         <section class="enemy_stat">
             <div class="enemy_statInner">
                 <div class="enemy_statLogo">
-                    <img src="/assets/images/cards/<?php echo $enemyAvatar ?>.jpeg" alt="enemyImage">
+                    <img id="enemyAvatar" src="/assets/images/avatars/1.jpeg" alt="enemyImage">
                     <div class="enemy_statHealth">
                         <span id="enemy_currentHealth">20</span>
                     </div>
                 </div>
                 <div class="enemy_statName">
-                    <label><?php echo $enemyUsername ?></label>
+                    <label id="enemyUsername">temp</label>
                 </div>
                 <div class="enemy_statStones">
-                    <label><label id="enemy_currentStones">6</label> / 6</label>
+                    <img src="/assets/images/mana_crystal.png">
+                    <span id="enemy_currentStones">6</span>
                 </div>
             </div>
         </section>
         <section class="enemy_deck">
-            <div class="entity_card" data-tilt data-tilt-max="0" data-tilt-scale="1.2">
-                <img src="/assets/images/enemy.png" alt="enemyCard">
-                <div class="entity_cardAttack">
-                    <span id="card_currentAttack">2</span>
-                </div>
-                <div class="entity_cardDefense">
-                    <span id="card_currentDefense">3</span>
-                </div>
-            </div>
-            <div class="entity_card" data-tilt data-tilt-max="0" data-tilt-scale="1.2">
-                <img src="/assets/images/enemy.png" alt="enemyCard">
-                <div class="entity_cardAttack">
-                    <span id="card_currentAttack">2</span>
-                </div>
-                <div class="entity_cardDefense">
-                    <span id="card_currentDefense">3</span>
-                </div>
-            </div>
-            <div class="entity_card" data-tilt data-tilt-max="0" data-tilt-scale="1.2">
-                <img src="/assets/images/enemy.png" alt="enemyCard">
-                <div class="entity_cardAttack">
-                    <span id="card_currentAttack">2</span>
-                </div>
-                <div class="entity_cardDefense">
-                    <span id="card_currentDefense">3</span>
-                </div>
-            </div>
         </section>
     </div>
     <div class="player_board unselectable">
         <section class="player_deck">
-        <div class="entity_card">
-                <img src="/assets/images/enemy.png" alt="enemyCard">
-                <div class="entity_cardAttack">
-                    <span id="card_currentAttack">2</span>
-                </div>
-                <div class="entity_cardDefense">
-                    <span id="card_currentDefense">3</span>
-                </div>
-            </div>
-            <div class="entity_card">
-                <img src="/assets/images/enemy.png" alt="enemyCard">
-                <div class="entity_cardAttack">
-                    <span id="card_currentAttack">2</span>
-                </div>
-                <div class="entity_cardDefense">
-                    <span id="card_currentDefense">3</span>
-                </div>
-            </div>
         </section>
         <section class="player_stat">
         <div class="player_statInner">
                 <div class="player_statLogo">
-                    <img src="/assets/images/cards/<?php echo $avatar ?>.jpeg" alt="playerImage">
+                    <img src="/assets/images/avatars/<?php echo $avatar ?>.jpeg" alt="playerImage">
                     <div class="player_statHealth">
                         <span id="player_currentHealth">20</span>
                     </div>
@@ -95,13 +71,6 @@
         </section>
         <section class="player_hand">
             <div class="player_handInner">
-                <div class="player_handCard">
-                    <div class="handcardImage">
-                        <img src="/assets/images/cringe.png" alt="handcardImage">
-                    </div>
-                    <label id="handcard_label">Cringe attack</label>
-                    <span id="handcard_description">Makes cringe because php is shit and we better should use nodejs who the fuck invented php why did you do that sample text sample text sample text</span>
-                </div>
             </div>
         </section>
     </div>

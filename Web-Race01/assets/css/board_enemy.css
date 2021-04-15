@@ -1,18 +1,18 @@
 .enemy_board {
     width: 100%;
-    height: 50%;
+    height: 48%;
 }
 .enemy_hand {
     width: 100%;
-    height: 15%;
+    height: 20%;
     background-color: transparent;
     display: flex;
     justify-content: center;
+    /* background-color: rgba(255, 0, 0, 0.5); */
 }
 .enemy_hand .enemy_handInner {
    min-width: 25%;
    height: 100%;
-   /* background-color: red; */
    display: flex;
    flex-direction: row;
    justify-content: center;
@@ -28,8 +28,8 @@
 
 .enemy_stat {
     width: 100%;
-    height: 35%;
-    /* background-color: chocolate; */
+    height: 40%;
+    /* background-color: rgba(210, 105, 30, 0.5); */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -37,32 +37,35 @@
 .enemy_stat .enemy_statInner {
     height: 100%;
     width: 180px;
-    /* background-color: sienna; */
+    /* background-color: rgba(160, 81, 45, 0.632); */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
+    margin-left: 36px;
 }
 .enemy_stat .enemy_statInner .enemy_statLogo {
-    width: 120px;
-    height: 120px;
+    width: 160px;
+    height: 160px;
     z-index: 1;
 }
 .enemy_stat .enemy_statInner .enemy_statLogo img {
     width: 100%;
     height: 100%;
     z-index: 1;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
 }
 .enemy_stat .enemy_statInner .enemy_statLogo .enemy_statHealth {
     display: flex;
     position: absolute;
-    margin-left: 105px;
+    margin-left: 150px;
     margin-top: -25px;
     z-index: 2;
     background-color: rgb(218, 16, 19);
     border-radius: 50%;
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     justify-content: center;
     align-items: center;
     border-top-left-radius: 1px;
@@ -72,7 +75,7 @@
 .enemy_stat .enemy_statInner .enemy_statLogo span {
     color: white;
     font-weight: 500;
-    font-size: 1.1em;
+    font-size: 1.2em;
     transform: rotate(-45deg);
 }
 .enemy_stat .enemy_statInner .enemy_statName label {
@@ -85,15 +88,24 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 30%;
-    height: initial;
-    background-color: rgb(37, 77, 198);
-    border-radius: 20px;
+    width: 46px;
+    height: 46px;
+    background-size: 100%;
+    z-index: 2;
+    margin-left: -140px;
+    margin-top: -50px;
 }
-.enemy_stat .enemy_statInner .enemy_statStones label {
+.enemy_stat .enemy_statInner .enemy_statStones img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.8);
+}
+.enemy_stat .enemy_statInner .enemy_statStones span#enemy_currentStones {
     color:rgb(255, 255, 255);
     font-weight: 500;
     font-size: 15px;
+    position: absolute;
+    z-index: 2;
 }
 
 .enemy_deck {
@@ -101,6 +113,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    /* background-color: rgba(64, 0, 255, 0.5); */
     width: 100%;
-    height: 50%;
+    height: 40%;
 }

@@ -12,7 +12,6 @@
         <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon" />
 
         <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-        <script src="assets/js/script.js" defer type="text/JavaScript"></script>
     </head>
     <body>
         <?php include 'application/views/'.$content_view; ?>

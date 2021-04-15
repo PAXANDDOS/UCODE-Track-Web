@@ -18,7 +18,7 @@ if(!isset($_SESSION['login'])) {
 }
 else {
 	if(isset($_POST['battleButton'])) {
-		echo '<script>location.replace("/search");</script>';
+		echo '<script>location.replace("/board");</script>';
 	}
 	else if(isset($_POST['avatarButton'])) {
 		$heroes = new User();

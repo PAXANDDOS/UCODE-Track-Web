@@ -3,7 +3,7 @@
     <h1 class="unselectable">Welcome to <br>Marvel <b>Heroes of the Earth-199999<b>!</h1>
     <div class="profile">
         <div class="avatarBox">
-            <img src="/assets/images/cards/<?php echo $avatar ?>.jpeg">
+            <img src="/assets/images/avatars/<?php echo $avatar ?>.jpeg">
         </div>
         <div class="buttons unselectable">
             <form method="post">
@@ -29,4 +29,3 @@
         </div>
     </div>
 </section>
-

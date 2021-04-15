@@ -10,11 +10,13 @@ body {
     background-size: cover;
     backdrop-filter: blur(150px);
 }
-.window {
+.searchScreen {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.window {
     background-color: rgba(50, 39, 59, 0.2);
     padding: 1%;
     border-radius: 3px;
