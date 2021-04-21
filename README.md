@@ -89,7 +89,7 @@
         <tr>
             <th><a href="https://github.com/PAXANDDOS/Heroes-of-the-Earth-199999">Web-Race01</a></th>
             <th>Card Game in battle variation.</th>
-            <th>16.04.2021</th>
+            <th>15.04.2021</th>
             <th>130</th>
         </tr>
     </table>
