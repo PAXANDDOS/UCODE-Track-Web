@@ -27,7 +27,7 @@
             <th>100</th>
         </tr>
         <tr>
-            <th>Web-Sprint01</th>
+            <th><a href="https://github.com/PAXANDDOS/UCODE-Full-Stack/tree/main/Web-Sprint01/t07">Web-Sprint01</a></th>
             <th>Get advanced skills in HTML and CSS (hovering, rotation, adaptive layouts, drop-down menus, filtering, etc.)</th>
             <th>07.03.2021</th>
             <th>100</th>
@@ -81,16 +81,16 @@
             <th>100</th>
         </tr>
         <tr>
-            <th><a href="https://paxanddos.github.io/ucode/calculator/index.html">Web-Race00</a></th>
+            <th><a href="https://paxanddos.github.io/projects/calculator">Web-Race00</a></th>
             <th>Simple Calculator using actual standards of programming (HTML, CSS, and JavaScript).</th>
             <th>21.03.2021</th>
             <th>140</th>
         </tr>
         <tr>
-            <th>Web-Race01</th>
+            <th><a href="https://github.com/PAXANDDOS/Heroes-of-the-Earth-199999">Web-Race01</a></th>
             <th>Card Game in battle variation.</th>
-            <th>__.04.2021</th>
-            <th></th>
+            <th>16.04.2021</th>
+            <th>130</th>
         </tr>
     </table>
 </body>
