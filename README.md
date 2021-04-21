@@ -27,7 +27,7 @@
             <th>100</th>
         </tr>
         <tr>
-            <th><a href="https://github.com/PAXANDDOS/UCODE-Full-Stack/tree/main/Web-Sprint01/t07">Web-Sprint01</a></th>
+            <th><a href="https://paxanddos.github.io/projects/ucode/pokeshop">Web-Sprint01</a></th>
             <th>Get advanced skills in HTML and CSS (hovering, rotation, adaptive layouts, drop-down menus, filtering, etc.)</th>
             <th>07.03.2021</th>
             <th>100</th>
@@ -45,7 +45,7 @@
             <th>100</th>
         </tr>
         <tr>
-            <th><a href="https://paxanddos.github.io/ucode/weatherapp/index.html">Web-Sprint04</a></th>
+            <th><a href="https://paxanddos.github.io/projects/ucode/weatherapp">Web-Sprint04</a></th>
             <th>Third-party API. DOM for accessing the HTML.</th>
             <th>17.03.2021</th>
             <th>100</th>
@@ -81,7 +81,7 @@
             <th>100</th>
         </tr>
         <tr>
-            <th><a href="https://paxanddos.github.io/projects/calculator">Web-Race00</a></th>
+            <th><a href="https://paxanddos.github.io/projects/ucode/calculator">Web-Race00</a></th>
             <th>Simple Calculator using actual standards of programming (HTML, CSS, and JavaScript).</th>
             <th>21.03.2021</th>
             <th>140</th>
