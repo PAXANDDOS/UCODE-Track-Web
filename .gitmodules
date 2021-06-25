@@ -1,0 +1,12 @@
+[submodule "usof-backend"]
+	path = usof-backend
+	url = https://github.com/PAXANDDOS/orbimind-api.git
+[submodule "usof-frontend"]
+	path = usof-frontend
+	url = https://github.com/PAXANDDOS/orbimind-react.git
+[submodule "Web-Race01"]
+	path = Web-Race01-s
+	url = https://github.com/PAXANDDOS/Heroes-of-the-Earth-199999.git
+[submodule "Web-Race00"]
+	path = Web-Race00-s
+	url = https://github.com/PAXANDDOS/calculator.git

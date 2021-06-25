@@ -92,6 +92,18 @@
             <th>15.04.2021</th>
             <th>130</th>
         </tr>
+        <tr>
+            <th><a href="https://github.com/PAXANDDOS/orbimind-api">USOF-Backend</a></th>
+            <th>RESTful API for a question and answer service forprofessional and enthusiast programmers - usof.</th>
+            <th>12.05.2021</th>
+            <th>140</th>
+        </tr>
+        <tr>
+            <th><a href="https://github.com/PAXANDDOS/orbimind-react">USOF-Frontend</a></th>
+            <th>Web app based on USOF-Backend.</th>
+            <th>08.06.2021</th>
+            <th>140</th>
+        </tr>
     </table>
 </body>
 
