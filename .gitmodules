@@ -10,3 +10,21 @@
 [submodule "Web-Race01"]
 	path = Heroes-of-the-Earth-199999
 	url = https://github.com/PAXANDDOS/Heroes-of-the-Earth-199999.git
+[submodule "weevely-api"]
+	path = weevely-api
+	url = https://github.com/PAXANDDOS/weevely-api.git
+[submodule "weevely-next"]
+	path = weevely-next
+	url = https://github.com/PAXANDDOS/weevely-next.git
+[submodule "munity-api"]
+	path = munity-api
+	url = https://github.com/PAXANDDOS/munity-api.git
+[submodule "munity-next"]
+	path = munity-next
+	url = https://github.com/PAXANDDOS/munity-next.git
+[submodule "fuzzle-api"]
+	path = fuzzle-api
+	url = https://github.com/PAXANDDOS/fuzzle-api.git
+[submodule "fuzzle-next"]
+	path = fuzzle-next
+	url = https://github.com/PAXANDDOS/fuzzle-next.git
